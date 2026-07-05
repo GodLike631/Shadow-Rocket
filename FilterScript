@@ -2,10 +2,10 @@
 # @ScriptName        shadow rocket管理节点名称过滤脚本
 # @Author            @weekin
 # @Tg                https://t.me/weekin 💡
-# @UpdateTime        2024/10/20 12:16 UTC/GMT +8
+# @UpdateTime        2026/07/05 12:16 UTC/GMT +8
 # @Function          自动为服务器节点添加国家或地区标识符，支持中英文输出，并通过自定义前缀和后缀重命名节点。同时，过滤无效关键词，保留必要信息，确保节点名称唯一且简洁等  
 # @howtouse          首页订阅后面ⓘ - 过滤，将文本内容全部复制，粘贴到输入框，保存即可
-# @ScriptUrl         https://raw.githubusercontent.com/kiwi707/Shadow-Rocket/refs/heads/main/FilterScript
+# @ScriptUrl         https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/FilterScript
 */
 let customCharStart = "➥"; //添加前缀，删除引号内的内容即不添加前缀
 let customCharEnd = "ᵐᵗ"; //添加后缀，删除引号中的内容即不添加后缀
