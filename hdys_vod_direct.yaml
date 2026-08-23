@@ -6,6 +6,9 @@
 # DOMAIN-SUFFIX: 444
 # TOTAL: 444
 payload:
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - RULE-SET,private_ip,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,tov7yi5pxg.cc,DIRECT
   - DOMAIN-SUFFIX,0708.fs708.com
   - DOMAIN-SUFFIX,115.com
   - DOMAIN-SUFFIX,155api.com
