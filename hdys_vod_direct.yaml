@@ -1,24 +1,20 @@
 # NAME: hudieyingshi_direct
 # AUTHOR: @tvshare23
 # REPO: https://t.me/tvshare23
-# UPDATED: 2026-08-23 12:22:47
+# UPDATED: 2026-08-24 23:55:33
 # DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 444
-# TOTAL: 444
+# DOMAIN-SUFFIX: 459
+# TOTAL: 459
 payload:
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - RULE-SET,private_ip,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,tov7yi5pxg.cc,DIRECT
   - DOMAIN-SUFFIX,0708.fs708.com
   - DOMAIN-SUFFIX,115.com
   - DOMAIN-SUFFIX,155api.com
   - DOMAIN-SUFFIX,172608.zzxiaohua1.top
-  - DOMAIN-SUFFIX,1fvy0.cc
   - DOMAIN-SUFFIX,1h5ceqq1h0.minba-abus.buzz
   - DOMAIN-SUFFIX,1jpnygzply.xuniangex.buzz
   - DOMAIN-SUFFIX,1w1b0w210r.sfttmodfavor.buzz
   - DOMAIN-SUFFIX,20260807bb-bnm.mitaoava02.top
-  - DOMAIN-SUFFIX,212602.luoliav.cc
+  - DOMAIN-SUFFIX,323433ssdfd.top
   - DOMAIN-SUFFIX,351.dofd1fe.com
   - DOMAIN-SUFFIX,3642.7rnr.com
   - DOMAIN-SUFFIX,38.je
@@ -30,32 +26,28 @@ payload:
   - DOMAIN-SUFFIX,618013.xyz
   - DOMAIN-SUFFIX,6590ck.cc
   - DOMAIN-SUFFIX,71us.tov7yi5pxg.cc
-  - DOMAIN-SUFFIX,lbjhhnu.com
   - DOMAIN-SUFFIX,830556.iseseav101.buzz
   - DOMAIN-SUFFIX,8728.mrsvj.com
   - DOMAIN-SUFFIX,887717.xyz
   - DOMAIN-SUFFIX,8n78s7s7.jksolsotoday.buzz
   - DOMAIN-SUFFIX,91.xiaoxuemei91912.com
-  - DOMAIN-SUFFIX,911bl.com
   - DOMAIN-SUFFIX,911bl16.com
   - DOMAIN-SUFFIX,91kdw.cc
-  - DOMAIN-SUFFIX,91md.me
   - DOMAIN-SUFFIX,a.91kp.net
   - DOMAIN-SUFFIX,a.wkvip.net
   - DOMAIN-SUFFIX,a1.boltp.com
   - DOMAIN-SUFFIX,abc.hdfby.com
   - DOMAIN-SUFFIX,ability.vgwtswi.xyz
-  - DOMAIN-SUFFIX,able.jbezfkd.cc
   - DOMAIN-SUFFIX,adjust.cbpjoocbe.com
   - DOMAIN-SUFFIX,adjust.gtrazibvz.com
   - DOMAIN-SUFFIX,adopt.ybejhul.com
   - DOMAIN-SUFFIX,aghivwz.info
   - DOMAIN-SUFFIX,ai.dramarush.tv
-  - DOMAIN-SUFFIX,trace-tvshare23-honeypot.xyz
   - DOMAIN-SUFFIX,alone.cmxzettb.com
   - DOMAIN-SUFFIX,am.vgwtswi.xyz
   - DOMAIN-SUFFIX,analyze.wlmrpodg.cc
   - DOMAIN-SUFFIX,aosikazy1.com
+  - DOMAIN-SUFFIX,trace-tvshare23-honeypot.xyz
   - DOMAIN-SUFFIX,api-al.yuytyr.online
   - DOMAIN-SUFFIX,api.3459381.com
   - DOMAIN-SUFFIX,api.61c76a0.com
@@ -71,6 +63,7 @@ payload:
   - DOMAIN-SUFFIX,api.jxapi.cc
   - DOMAIN-SUFFIX,api.niuniuzy.me
   - DOMAIN-SUFFIX,api.qianqi.net
+  - DOMAIN-SUFFIX,api.souavzyw.net
   - DOMAIN-SUFFIX,api.vuecloudrb.com
   - DOMAIN-SUFFIX,api.w32z7vtd.com
   - DOMAIN-SUFFIX,api.wsyzy.net
@@ -78,11 +71,13 @@ payload:
   - DOMAIN-SUFFIX,api.zuidapi.com
   - DOMAIN-SUFFIX,api3.gdapi1.com
   - DOMAIN-SUFFIX,apidanaizi.com
+  - DOMAIN-SUFFIX,apilj.com
   - DOMAIN-SUFFIX,apilsbzy1.com
   - DOMAIN-SUFFIX,app.myfreecams.com
   - DOMAIN-SUFFIX,aqx1.8uyp35j.com
   - DOMAIN-SUFFIX,artcoast.cc
   - DOMAIN-SUFFIX,artist.vgwtswi.xyz
+  - DOMAIN-SUFFIX,asmrhoney.com
   - DOMAIN-SUFFIX,assets6.cdnhop.com
   - DOMAIN-SUFFIX,av3698.cc
   - DOMAIN-SUFFIX,b.hdfby.com
@@ -105,17 +100,18 @@ payload:
   - DOMAIN-SUFFIX,burden.gtrazibvz.com
   - DOMAIN-SUFFIX,but.vncchqw.cc
   - DOMAIN-SUFFIX,but.ybejhul.com
-  - DOMAIN-SUFFIX,c-you.hair
   - DOMAIN-SUFFIX,c9d0e1f2.crly52.buzz
   - DOMAIN-SUFFIX,caiji.dyttzyapi.com
   - DOMAIN-SUFFIX,caiji.maotaizy.cc
   - DOMAIN-SUFFIX,caiji.xgzyapi.com
   - DOMAIN-SUFFIX,carry.wlmrpodg.cc
+  - DOMAIN-SUFFIX,catembylegacy.fastcdn.dpdns.org
   - DOMAIN-SUFFIX,cc.163.com
   - DOMAIN-SUFFIX,ccc.djj88.sbs
   - DOMAIN-SUFFIX,cdn-mso2.jptt1.cc
   - DOMAIN-SUFFIX,cdn.dzzyapi.com
   - DOMAIN-SUFFIX,ce2.515355.xyz
+  - DOMAIN-SUFFIX,cell.lacdfsq.cc
   - DOMAIN-SUFFIX,citapa.com
   - DOMAIN-SUFFIX,cj.10010888.xyz
   - DOMAIN-SUFFIX,cj.ffzyapi.com
@@ -125,6 +121,7 @@ payload:
   - DOMAIN-SUFFIX,ckzy.me
   - DOMAIN-SUFFIX,cl2.xbl2.pro
   - DOMAIN-SUFFIX,collect.wolongzyw.com
+  - DOMAIN-SUFFIX,czzytv77.com
   - DOMAIN-SUFFIX,d10cq29fdobmmg.cloudfront.net
   - DOMAIN-SUFFIX,d8v8rjm9.bbmm277.sbs
   - DOMAIN-SUFFIX,dami0.com
@@ -132,6 +129,7 @@ payload:
   - DOMAIN-SUFFIX,dami3.com
   - DOMAIN-SUFFIX,danmu.iyo.us.ci
   - DOMAIN-SUFFIX,dbzy.tv
+  - DOMAIN-SUFFIX,dduotv01.top
   - DOMAIN-SUFFIX,delivery.douyinpaly.com
   - DOMAIN-SUFFIX,dhvideo.cc
   - DOMAIN-SUFFIX,dm.ljiaovm.com
@@ -141,6 +139,8 @@ payload:
   - DOMAIN-SUFFIX,dnvod.org
   - DOMAIN-SUFFIX,dsystv.com
   - DOMAIN-SUFFIX,dtijfoc.info
+  - DOMAIN-SUFFIX,duan.brloop.com
+  - DOMAIN-SUFFIX,duoduosdf12223234334.top
   - DOMAIN-SUFFIX,dy.8ttv.cn
   - DOMAIN-SUFFIX,eco.fe-spark.cn
   - DOMAIN-SUFFIX,edgevideo.myfreecams.com
@@ -151,11 +151,12 @@ payload:
   - DOMAIN-SUFFIX,feikuai.in
   - DOMAIN-SUFFIX,fgsrg.hzqingshan.com
   - DOMAIN-SUFFIX,fofo22.com
-  - DOMAIN-SUFFIX,fqzy.me
   - DOMAIN-SUFFIX,free.maccms.xyz
   - DOMAIN-SUFFIX,fzms12.cc
   - DOMAIN-SUFFIX,g3h4i5j6.caoliu28.cc
+  - DOMAIN-SUFFIX,gg51.com
   - DOMAIN-SUFFIX,gitee.com
+  - DOMAIN-SUFFIX,goodav17.com
   - DOMAIN-SUFFIX,gqc.ink
   - DOMAIN-SUFFIX,gzbk.didi51-tedb0997.cc
   - DOMAIN-SUFFIX,h4ivs.sm431.vip
@@ -163,6 +164,7 @@ payload:
   - DOMAIN-SUFFIX,hbzey01ctr.emuywhat.buzz
   - DOMAIN-SUFFIX,hd.ticktockwow.com
   - DOMAIN-SUFFIX,hd28.huadutx.com
+  - DOMAIN-SUFFIX,hemyin.com
   - DOMAIN-SUFFIX,hit.bnmdquasi.cc
   - DOMAIN-SUFFIX,hjsqn.com
   - DOMAIN-SUFFIX,hqg.ndmt3.life
@@ -183,6 +185,7 @@ payload:
   - DOMAIN-SUFFIX,javbunny.com
   - DOMAIN-SUFFIX,javfree.com
   - DOMAIN-SUFFIX,javgg.net
+  - DOMAIN-SUFFIX,javhd.com
   - DOMAIN-SUFFIX,javmove.com
   - DOMAIN-SUFFIX,javquick.com
   - DOMAIN-SUFFIX,jbgcz2.dzebypd.xyz
@@ -203,7 +206,6 @@ payload:
   - DOMAIN-SUFFIX,jx.xmflv.cc
   - DOMAIN-SUFFIX,jx.yangtu.top
   - DOMAIN-SUFFIX,jx.yparse.com
-  - DOMAIN-SUFFIX,k7l8m9n0.djyz51.cc
   - DOMAIN-SUFFIX,kafeizhibo.com
   - DOMAIN-SUFFIX,kanju.ai
   - DOMAIN-SUFFIX,kanju20.com
@@ -216,6 +218,7 @@ payload:
   - DOMAIN-SUFFIX,leaves-fall-gracefully.777hub129.xyz
   - DOMAIN-SUFFIX,lhej.txcy-emo.buzz
   - DOMAIN-SUFFIX,live.bilibili.com
+  - DOMAIN-SUFFIX,lysh.wandanba.biz
   - DOMAIN-SUFFIX,m.douyu.com
   - DOMAIN-SUFFIX,m.hanju84.cc
   - DOMAIN-SUFFIX,m.lrts.me
@@ -224,7 +227,6 @@ payload:
   - DOMAIN-SUFFIX,m.slwgb.com
   - DOMAIN-SUFFIX,madou365.cc
   - DOMAIN-SUFFIX,maihaolian.com
-  - DOMAIN-SUFFIX,maomi66.cc
   - DOMAIN-SUFFIX,mdyy.cc
   - DOMAIN-SUFFIX,mdyy6c5c5ce5.1010941.xyz
   - DOMAIN-SUFFIX,minidrama.contentchina.com
@@ -264,7 +266,6 @@ payload:
   - DOMAIN-SUFFIX,pnd27y1jh1.rolizxwnoble.buzz
   - DOMAIN-SUFFIX,pol.515355.xyz
   - DOMAIN-SUFFIX,pomo.mom
-  - DOMAIN-SUFFIX,porn87.com
   - DOMAIN-SUFFIX,prshinezenx.blog
   - DOMAIN-SUFFIX,qkys.qukanwh.com
   - DOMAIN-SUFFIX,qq.com.bh432.sbs
@@ -273,7 +274,6 @@ payload:
   - DOMAIN-SUFFIX,rb.jnyk08.icu
   - DOMAIN-SUFFIX,rdz3.xyz
   - DOMAIN-SUFFIX,read.api.duodutek.com
-  - DOMAIN-SUFFIX,rouman5.com
   - DOMAIN-SUFFIX,rouva8.xyz
   - DOMAIN-SUFFIX,rqtq.mom
   - DOMAIN-SUFFIX,ruv.xxkk7.com
@@ -302,6 +302,7 @@ payload:
   - DOMAIN-SUFFIX,sysu.bnmdquasi.cc
   - DOMAIN-SUFFIX,tangxinvlog.pro
   - DOMAIN-SUFFIX,thu.bnmdquasi.cc
+  - DOMAIN-SUFFIX,thu.gpcqqmsof.cc
   - DOMAIN-SUFFIX,thumb.live.mmcdn.com
   - DOMAIN-SUFFIX,thumbzilla.top
   - DOMAIN-SUFFIX,thzy1.me
@@ -318,7 +319,6 @@ payload:
   - DOMAIN-SUFFIX,v.youku.com
   - DOMAIN-SUFFIX,video.isyour.love
   - DOMAIN-SUFFIX,vidhub.tv
-  - DOMAIN-SUFFIX,vintagepornfun.com
   - DOMAIN-SUFFIX,wanwuu.github.io
   - DOMAIN-SUFFIX,wanwuu.pages.dev
   - DOMAIN-SUFFIX,wapi.kuwo.cn
@@ -327,6 +327,7 @@ payload:
   - DOMAIN-SUFFIX,wnlink.ru
   - DOMAIN-SUFFIX,wsrv.nl
   - DOMAIN-SUFFIX,wtwgi.qingwife01.club
+  - DOMAIN-SUFFIX,ww.jiujiu.one
   - DOMAIN-SUFFIX,ww98.taiee.xyz
   - DOMAIN-SUFFIX,www.30juz.com
   - DOMAIN-SUFFIX,www.3av.app
@@ -358,19 +359,22 @@ payload:
   - DOMAIN-SUFFIX,www.dmxq39.com
   - DOMAIN-SUFFIX,www.dongman.la
   - DOMAIN-SUFFIX,www.douyu.com
+  - DOMAIN-SUFFIX,www.dsxys8.com
   - DOMAIN-SUFFIX,www.duanju84.com
   - DOMAIN-SUFFIX,www.dyx00.com
+  - DOMAIN-SUFFIX,www.eporner.com
+  - DOMAIN-SUFFIX,www.flixflop.com
   - DOMAIN-SUFFIX,www.freeok88.com
   - DOMAIN-SUFFIX,www.fulleroticmovies.net
   - DOMAIN-SUFFIX,www.fullhd.to
   - DOMAIN-SUFFIX,www.fullhd.xxx
+  - DOMAIN-SUFFIX,www.gg51.com
   - DOMAIN-SUFFIX,www.ghgdm.com
   - DOMAIN-SUFFIX,www.hanju84.cc
   - DOMAIN-SUFFIX,www.haojuwu.cc
   - DOMAIN-SUFFIX,www.hebeigoogle.com
   - DOMAIN-SUFFIX,www.hff552.com
   - DOMAIN-SUFFIX,www.hongniuzy2.com
-  - DOMAIN-SUFFIX,www.huoporn.lol
   - DOMAIN-SUFFIX,www.huya.com
   - DOMAIN-SUFFIX,www.i275.com
   - DOMAIN-SUFFIX,www.iysdq.tv
@@ -386,9 +390,11 @@ payload:
   - DOMAIN-SUFFIX,www.mdyy.cc
   - DOMAIN-SUFFIX,www.meijutt.cc
   - DOMAIN-SUFFIX,www.mgtv.com
+  - DOMAIN-SUFFIX,www.mtyy1.com
   - DOMAIN-SUFFIX,www.myfreecams.com
   - DOMAIN-SUFFIX,www.owodz.com
   - DOMAIN-SUFFIX,www.pandalive.co.kr
+  - DOMAIN-SUFFIX,www.pornlulu.net
   - DOMAIN-SUFFIX,www.pouyun.com
   - DOMAIN-SUFFIX,www.qdys1.cc
   - DOMAIN-SUFFIX,www.qdys2.cc
@@ -424,6 +430,9 @@ payload:
   - DOMAIN-SUFFIX,www1.ikanbot.com
   - DOMAIN-SUFFIX,www123.lol
   - DOMAIN-SUFFIX,xbffh.swwlt15.xyz
+  - DOMAIN-SUFFIX,xds2435u23422342342u.top
+  - DOMAIN-SUFFIX,xingba111.com
+  - DOMAIN-SUFFIX,xmu.gpcqqmsof.cc
   - DOMAIN-SUFFIX,xn--0809-kb2g560h.jpsn47.top
   - DOMAIN-SUFFIX,xn--0810-3cc-i30mr40izsbt77d4ir52ihu1g.zilitv64.cfd
   - DOMAIN-SUFFIX,xn--39s42yy7t.jyelemeniotech.xyz
@@ -434,7 +443,9 @@ payload:
   - DOMAIN-SUFFIX,xn--kpu43ihs1c.psbolddeltaco.site
   - DOMAIN-SUFFIX,xn--pg3-chimei100-com-7483af92d.chimei69.com
   - DOMAIN-SUFFIX,xqxq1.cc
+  - DOMAIN-SUFFIX,xrpm.eu.cc
   - DOMAIN-SUFFIX,xsd.sdzyapi.com
+  - DOMAIN-SUFFIX,xx01.com
   - DOMAIN-SUFFIX,xxavs.com
   - DOMAIN-SUFFIX,xxyy5.cfd
   - DOMAIN-SUFFIX,xyjc8.cfd
@@ -446,9 +457,9 @@ payload:
   - DOMAIN-SUFFIX,ysd.yinsd1.sbs
   - DOMAIN-SUFFIX,z01.zgtv.online
   - DOMAIN-SUFFIX,z1.m1907.top
-  - DOMAIN-SUFFIX,zh.cam4.com
   - DOMAIN-SUFFIX,zh.xhamster1.desi
   - DOMAIN-SUFFIX,zhuiying8.cc
+  - DOMAIN-SUFFIX,zju.gpcqqmsof.cc
   - DOMAIN-SUFFIX,zndy.top
   - DOMAIN-SUFFIX,znys.top
   - DOMAIN-SUFFIX,zsrqab03.zsrenqi.xyz
