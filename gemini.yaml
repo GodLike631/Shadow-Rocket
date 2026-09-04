@@ -1,0 +1,34 @@
+payload:
+  # > Gemini (Web & API & Auth)
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,bard.google.com
+  - DOMAIN-SUFFIX,ai.google.dev
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+  - DOMAIN-SUFFIX,alkalimakersuite-pa.googleapis.com
+  - DOMAIN-SUFFIX,waa-pa.clients6.google.com
+
+  # > Google DeepMind & AI Research
+  - DOMAIN-SUFFIX,deepmind.com
+  - DOMAIN-SUFFIX,deepmind.google
+
+  # > Google Authentication & User State
+  - DOMAIN-SUFFIX,accounts.google.com
+  - DOMAIN-SUFFIX,oauth2.googleapis.com
+  - DOMAIN-SUFFIX,myaccount.google.com
+  - DOMAIN-SUFFIX,apis.google.com
+
+  # > Static Assets, Fonts & CDNs
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,lh3.googleusercontent.com
+
+  # > Google APIs & Telemetry Support
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,play.googleapis.com
+  - DOMAIN-SUFFIX,clients6.google.com
+  - DOMAIN-SUFFIX,content-autofill.googleapis.com
+
+  # > Keyword Fallback
+  - DOMAIN-KEYWORD,gemini
+  - DOMAIN-KEYWORD,bard
