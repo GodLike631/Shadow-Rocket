@@ -1,0 +1,25 @@
+#!name = GetAV 跨平台增强模块 (Surge 容灾版)
+#!desc = 为 iOS Hawk Player 自动补全防盗链 Header，并提供基于网络层的域名失效重定向容灾。
+#!author = HawkSpiderDebug
+#!category = Media
+
+[MITM]
+# 声明需要解密并拦截的域名（包含主站、镜像站及图床）
+hostname = %APPEND% *.worldstatic.com, *.getav.*, getav.*
+
+[Header Rewrite]
+# 1. 自动为静态图床与媒体切片补全 Referer 防盗链
+^https?://.*\.worldstatic\.com header-replace Referer https://getav.net/
+^https?://.*\.worldstatic\.com header-replace Origin https://getav.net
+
+# 2. 自动为 GetAV API 补全合法来源头
+^https?://.*\.getav\.(?:net|me|live|co|top) header-replace Referer https://getav.net/zh
+^https?://.*\.getav\.(?:net|me|live|co|top) header-replace Origin https://getav.net
+
+[URL Rewrite]
+# 3. 动态容灾热切换（爬虫请求基准域名 getav.net 时生效）
+# 若 getav.net 失效，启用下方对应行（使用 307 重定向保持 POST/GET 请求方法不变）：
+# ^https?://getav\.net/(.*) https://getav.me/$1 307
+# ^https?://getav\.net/(.*) https://getav.live/$1 307
+# ^https?://getav\.net/(.*) https://getav.co/$1 307
+# ^https?://getav\.net/(.*) https://getav.top/$1 307
