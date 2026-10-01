@@ -1,0 +1,23 @@
+#!name = GetAV 跨平台增强模块 (小火箭容灾版)
+#!desc = 为 iOS Hawk Player 自动补全防盗链 Header，并提供基于网络层的域名失效重定向容灾。
+#!author = HawkSpiderDebug
+#!category = TVBox
+#!system = iOS
+
+[MITM]
+hostname = *.worldstatic.com, *.getav.*, getav.*
+
+[Header Rewrite]
+# 1. 静态图床与切片 CDN 补全
+^https?://.*\.worldstatic\.com header-replace Referer https://getav.net/
+^https?://.*\.worldstatic\.com header-replace Origin https://getav.net
+
+# 2. API 来源头补全
+^https?://.*\.getav\.(?:net|me|live|co|top) header-replace Referer https://getav.net/zh
+^https?://.*\.getav\.(?:net|me|live|co|top) header-replace Origin https://getav.net
+
+[URL Rewrite]
+# 3. 动态容灾重定向（通过 307 保持请求方式跳转至存活镜像）
+# 备用域名列表：getav.me / getav.live / getav.co / getav.top
+# 当主域名不可用时，取消注释下方一行即可：
+# ^https?://getav\.net/(.*) https://getav.me/$1 307
