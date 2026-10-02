@@ -1,0 +1,18 @@
+#!name=CartoonPorno 直连分流
+#!desc=CartoonPorno 主站、备用域名、导航主域及媒体/图片 CDN 节点全量直连
+#!category=Direct
+
+[Rule]
+# > CartoonPorno - Main & Fallback Domains
+DOMAIN-SUFFIX,cartoonporno.cc,DIRECT
+DOMAIN-SUFFIX,cartoonporno.xxx,DIRECT
+DOMAIN-SUFFIX,x99dh.com,DIRECT
+DOMAIN-SUFFIX,x99dh.vip,DIRECT
+DOMAIN-SUFFIX,x99dh.my,DIRECT
+DOMAIN-SUFFIX,x99dh.cc,DIRECT
+DOMAIN-SUFFIX,x99dh.one,DIRECT
+
+# > CartoonPorno - Media & Picture CDN
+DOMAIN-SUFFIX,71352.men,DIRECT
+DOMAIN,vcdn1.cartoonporno.cc,DIRECT
+DOMAIN,cdn-pic.cartoonporno.cc,DIRECT
