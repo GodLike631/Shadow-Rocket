@@ -1,0 +1,26 @@
+#!name=蝴蝶影院 (PTT01) 播放与直连增强模块
+#!desc=强制直连 PTT01 站点、发布导航页及全部第三方切片 CDN，解决代理导致的 403 播放无权限问题
+#!category=Media
+
+[Rule]
+# 1. 站点主站与发布导航
+DOMAIN-SUFFIX,ptt01.com,DIRECT
+DOMAIN-SUFFIX,x99dh.cc,DIRECT
+DOMAIN-SUFFIX,x99dh.one,DIRECT
+DOMAIN-KEYWORD,ptt01,DIRECT
+
+# 2. 媒体切片与视频源 CDN（走代理触发 403 权限拒绝）
+DOMAIN-SUFFIX,yzzy.play-cdn7.com,DIRECT
+DOMAIN-SUFFIX,bfzycdn.com,DIRECT
+DOMAIN-SUFFIX,vip.ffzy-online.com,DIRECT
+DOMAIN-SUFFIX,ffzy-play.com,DIRECT
+DOMAIN-SUFFIX,ffzyread.com,DIRECT
+DOMAIN-SUFFIX,ffzyread1.com,DIRECT
+DOMAIN-SUFFIX,ffzycdn.com,DIRECT
+DOMAIN-SUFFIX,lzcdn.com,DIRECT
+DOMAIN-SUFFIX,snscache.com,DIRECT
+DOMAIN-SUFFIX,ikzybf.com,DIRECT
+DOMAIN-SUFFIX,modujx.com,DIRECT
+DOMAIN-SUFFIX,hhplayer.com,DIRECT
+DOMAIN-KEYWORD,ffzy,DIRECT
+DOMAIN-KEYWORD,bfzy,DIRECT
