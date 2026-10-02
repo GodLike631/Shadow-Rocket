@@ -1,0 +1,21 @@
+#!name = MissAV 跨平台增强模块 (小火箭版)
+#!desc = 仅保留图床防盗链与千兆分流矩阵，不干扰爬虫内部的主备容灾与播放 Header。
+#!author = HawkSpiderDebug
+#!category = Media
+
+[MITM]
+hostname = %APPEND% *.fourhoi.com, fourhoi.com
+
+[Header Rewrite]
+# 匹配目标请求替换 Referer 请求头
+^https?://.*\.fourhoi\.com header-replace Referer https://missav.ws/
+
+[Rule]
+# 媒体切片与图床走本地直连
+DOMAIN-SUFFIX,surrit.com,DIRECT
+DOMAIN-SUFFIX,sixyik.com,DIRECT
+DOMAIN-SUFFIX,fourhoi.com,DIRECT
+
+# 页面与 API 走节点代理
+DOMAIN-SUFFIX,missav.ws,PROXY
+DOMAIN-SUFFIX,thisav.my,PROXY
