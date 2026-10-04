@@ -1,6 +1,3 @@
-/**
- * Surge 与 Shadowrocket 双兼容完整版
- */
 let body = $response.body;
 
 if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
