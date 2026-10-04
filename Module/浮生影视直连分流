@@ -1,0 +1,17 @@
+#!name = 浮生影视直连分流
+#!desc = 浮生影视业务主站、备用发布页及切片CDN流量强制直连 (DIRECT)
+#!author = 蝴蝶影视
+
+[Rule]
+# 业务主站与动态域名
+DOMAIN,tv.fushengr.cc,DIRECT
+DOMAIN-SUFFIX,fushengr.cc,DIRECT
+
+# 官方备用发布页
+DOMAIN-SUFFIX,madou2025.com,DIRECT
+DOMAIN-SUFFIX,kpw2026.com,DIRECT
+
+# 核心流媒体与图床 CDN
+DOMAIN,d32bg2g0w9aqg4.cloudfront.net,DIRECT
+DOMAIN,vsdsq.tjacq.com,DIRECT
+DOMAIN-SUFFIX,tjacq.com,DIRECT
