@@ -1,3 +1,11 @@
+/**
+HLS Playlist Cleaner
+Surge / Shadowrocket compatible
+功能：
+找到第一個 #EXT-X-DISCONTINUITY，
+移除它之前的媒體分段，
+同時保留 M3U8 全域 Header。 */
+(() => { try { const originalBody = $response && $response.body;
     // 非字串或空內容直接放行
     if (typeof originalBody !== "string" || !originalBody) {
         return $done({});
@@ -70,3 +78,4 @@
     // 發生任何異常時保持原始回應，避免播放失敗
     $done({});
 }
+})();
