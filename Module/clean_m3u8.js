@@ -1,109 +1,107 @@
 /**
- * 影视 M3U8 通用去广告脚本（彻底清洗版）
+ * 影视 M3U8 通用去广告脚本（分块状态机终极稳定版）
  * 兼容: Surge / Shadowrocket / Loon / Quantumult X
- * 支持: 片头 + 片中插播全量清洗、\r\n 换行符消除、METHOD=NONE 强制擦除
+ * Telegram群组：https://t.me/tvshare23
  */
 
 let body = $response.body;
 
-if (typeof body === "string" && body.toUpperCase().indexOf("#EXTM3U") !== -1) {
-    // 1. 统一归一化换行符，剔除 \r 干扰
-    const lines = body.replace(/\r/g, "").split("\n");
+if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
+    // 归一化换行符
+    const rawLines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 广告切片目录及特征关键词库
+    // 广告特征库（已包含全部历史特征）
     const adKeywords = /(9641kb|Zse0Tpg8|seg_iif|9c08cdc|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
 
-    let headerDone = false;
-    let pendingExtinf = null;
+    let inHeader = true;
+    let currentBlock = [];
+    let blockHasAd = false;
 
-    for (let i = 0; i < lines.length; i++) {
-        let line = lines[i].trim();
+    // 提交当前块数据的辅助函数
+    function flushBlock() {
+        if (!blockHasAd && currentBlock.length > 0) {
+            for (let k = 0; k < currentBlock.length; k++) {
+                outputLines.push(currentBlock[k]);
+            }
+        }
+        currentBlock = [];
+        blockHasAd = false;
+    }
+
+    for (let i = 0; i < rawLines.length; i++) {
+        let line = rawLines[i].trim();
         if (!line) continue;
 
         let upperLine = line.toUpperCase();
 
-        // 0. 过滤非标准混淆噪音标签
+        // 1. 过滤干扰混淆标签
         if (upperLine.startsWith("#DISC-NOISE")) {
             continue;
         }
 
-        // 1. 全局彻底清除 METHOD=NONE 标签（正片绝不需要该标签，广告多用来重置解密状态）
-        if (upperLine.startsWith("#EXT-X-KEY") && upperLine.includes("METHOD=NONE")) {
-            continue;
-        }
-
-        // 2. 广告特征 Key 直接剔除
-        if (upperLine.startsWith("#EXT-X-KEY") && adKeywords.test(line)) {
-            continue;
-        }
-
-        // 3. 保留播放列表头部元数据
-        if (!headerDone) {
-            if (upperLine.startsWith("#EXTINF") || upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
-                headerDone = true;
+        // 2. 头部元数据区（在遇到第一个切片、第一个断点或密钥前）
+        if (inHeader) {
+            if (upperLine.startsWith("#EXTINF") || upperLine.startsWith("#EXT-X-DISCONTINUITY") || upperLine.startsWith("#EXT-X-KEY")) {
+                inHeader = false;
+                // 转入块处理逻辑
             } else {
                 outputLines.push(line);
                 continue;
             }
         }
 
-        // 4. 时长标签暂存待判
-        if (upperLine.startsWith("#EXTINF")) {
-            pendingExtinf = line;
+        // 3. 遇到断点标签：标志着上一个块结束，新块开始
+        if (upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
+            flushBlock();
+            // 先不把 DISCONTINUITY 放进新块，等确认新块是非广告块后再决定是否保留
             continue;
         }
 
-        // 5. 切片路径判定与清洗
+        // 4. 块内属性探测与收集
+        if (upperLine.startsWith("#EXT-X-KEY:METHOD=NONE")) {
+            // 广告块通常带有 METHOD=NONE，不压入正片流
+            continue;
+        }
+
+        // 检测 Key 是否含广告特征
+        if (upperLine.startsWith("#EXT-X-KEY") && adKeywords.test(line)) {
+            blockHasAd = true;
+            continue;
+        }
+
+        // 检测切片 URL 是否含广告特征
         if (!line.startsWith("#")) {
             if (adKeywords.test(line)) {
-                // 命中广告切片，废弃对应的 EXTINF
-                pendingExtinf = null;
-            } else {
-                if (pendingExtinf) {
-                    outputLines.push(pendingExtinf);
-                    pendingExtinf = null;
-                }
-                outputLines.push(line);
+                blockHasAd = true;
             }
-            continue;
         }
 
-        // 6. 断点标签 (#EXT-X-DISCONTINUITY) 深度前瞻探测
-        if (upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
-            let isAdSection = false;
-            // 扩大前瞻范围至 15 行，确保能越过 EXTINF 探测到切片 URL
-            for (let j = i + 1; j < Math.min(i + 16, lines.length); j++) {
-                let testLine = lines[j].trim();
-                let upperTest = testLine.toUpperCase();
-                if (upperTest.startsWith("#EXT-X-DISCONTINUITY")) break;
-                if (adKeywords.test(testLine)) {
-                    isAdSection = true;
-                    break;
-                }
-            }
-
-            if (isAdSection) {
-                continue;
-            }
-
-            // 防止正片开头或相邻位置留下冗余连续的 DISCONTINUITY
-            if (outputLines.length > 0 && outputLines[outputLines.length - 1].toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) {
-                continue;
-            }
-
-            outputLines.push(line);
-            continue;
-        }
-
-        // 7. 正片正常 Key 及其它元数据原样保留
-        outputLines.push(line);
+        currentBlock.push(line);
     }
 
-    body = outputLines.join("\n");
+    // 刷出最后一个块
+    flushBlock();
+
+    // 4. 结尾规范化与双重断点清理
+    const finalLines = [];
+    for (let j = 0; j < outputLines.length; j++) {
+        let l = outputLines[j];
+        // 清除开头多余的 DISCONTINUITY
+        if (finalLines.length === 0 && l.toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) {
+            continue;
+        }
+        // 清除连续重复的 DISCONTINUITY
+        if (l.toUpperCase().startsWith("#EXT-X-DISCONTINUITY") && 
+            finalLines.length > 0 && 
+            finalLines[finalLines.length - 1].toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) {
+            continue;
+        }
+        finalLines.push(l);
+    }
+
+    body = finalLines.join("\n");
 }
 
-$done({
-    response: { body: body },
-    body: body
-});
+// 统一标准输出，防止跨客户端兼容性问题
+$done({ body: body });
