@@ -1,0 +1,30 @@
+#!name = 聚合影视 M3U8 贴片去广告合集
+#!desc = 自动清洗 CKZY、午夜影视、森林影视等采集站 M3U8 列表开头的 TS/图片切片广告
+#!author = 🦋 蝴蝶影视
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Video.png
+
+[Rule]
+# --- 蝴蝶影院 ---
+DOMAIN-SUFFIX,ckzy3.com,DIRECT
+DOMAIN-SUFFIX,ckzyc.vip,DIRECT
+DOMAIN-SUFFIX,ptt01.com,DIRECT
+
+# --- 午夜影视 ---
+DOMAIN-SUFFIX,cdn-xj.cc,DIRECT
+DOMAIN-SUFFIX,cdn-99.cc,DIRECT
+DOMAIN-SUFFIX,wuye.mom,DIRECT
+DOMAIN-SUFFIX,wuyeys.com,DIRECT
+DOMAIN,xn--5us888dtla.wuye.mom,DIRECT
+DOMAIN-SUFFIX,lprk.cc,DIRECT
+DOMAIN,qweqwe.lprk.cc,DIRECT
+DOMAIN-SUFFIX,mtzy2.com,DIRECT
+
+# --- 森林影视 ---
+DOMAIN-SUFFIX,senlin2026.com,DIRECT
+
+[Script]
+# Loon 响应体修改脚本格式
+http-response ^https?:\/\/.*(ckzy3\.com|cdn-xj\.cc|senlin2026\.com)\/.*\.m3u8.* script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 60, tag = 通用M3U8广告清洗
+
+[Mitm]
+hostname = ckzy3.com, *.cdn-xj.cc, *.senlin2026.com
