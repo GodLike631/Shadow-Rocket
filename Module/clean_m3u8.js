@@ -10,8 +10,8 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
     const rawLines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 广告特征关键词库（已追加 30EjJFTT、10141kb 等特征）
-    const adKeywords = /(9641kb|10141kb|30EjJFTT|Zse0Tpg8|seg_iif|seg_|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
+    // 广告特征关键词库（已追加 W7fqTmbJ、1000kb 等特征）
+    const adKeywords = /(9641kb|10141kb|1000kb|30EjJFTT|W7fqTmbJ|Zse0Tpg8|seg_iif|seg_|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
 
     let pendingExtinf = null;
     let pendingDiscontinuity = false;
