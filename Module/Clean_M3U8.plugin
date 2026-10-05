@@ -4,6 +4,7 @@
 #!tag = 去广告, 流媒体
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Video.png
 # Telegram群组：https://t.me/tvshare23
+# 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫
 
 [Rule]
 # == 1. 采集站切片去广告目标源 (DIRECT) ==
