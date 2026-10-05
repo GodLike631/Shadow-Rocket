@@ -1,15 +1,17 @@
 /**
- * 影视 M3U8 通用去广告脚本（片头 + 片中全覆盖）
+ * 影视 M3U8 通用去广告脚本（彻底清洗版）
  * 兼容: Surge / Shadowrocket / Loon / Quantumult X
+ * 支持: 片头 + 片中插播全量清洗、\r\n 换行符消除、METHOD=NONE 强制擦除
  */
 
 let body = $response.body;
 
 if (typeof body === "string" && body.toUpperCase().indexOf("#EXTM3U") !== -1) {
-    const lines = body.split("\n");
+    // 1. 统一归一化换行符，剔除 \r 干扰
+    const lines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 广告切片目录及特征关键词库（新增 C7bAbClC 与 erlgnf.com）
+    // 广告切片目录及特征关键词库
     const adKeywords = /(9641kb|Zse0Tpg8|seg_iif|9c08cdc|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
 
     let headerDone = false;
@@ -21,33 +23,41 @@ if (typeof body === "string" && body.toUpperCase().indexOf("#EXTM3U") !== -1) {
 
         let upperLine = line.toUpperCase();
 
-        // 0. 过滤非标准混淆干扰标签
+        // 0. 过滤非标准混淆噪音标签
         if (upperLine.startsWith("#DISC-NOISE")) {
             continue;
         }
 
-        // 1. 保留头部元数据（到第一个切片或密钥前）
+        // 1. 全局彻底清除 METHOD=NONE 标签（正片绝不需要该标签，广告多用来重置解密状态）
+        if (upperLine.startsWith("#EXT-X-KEY") && upperLine.includes("METHOD=NONE")) {
+            continue;
+        }
+
+        // 2. 广告特征 Key 直接剔除
+        if (upperLine.startsWith("#EXT-X-KEY") && adKeywords.test(line)) {
+            continue;
+        }
+
+        // 3. 保留播放列表头部元数据
         if (!headerDone) {
             if (upperLine.startsWith("#EXTINF") || upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
                 headerDone = true;
             } else {
-                if (upperLine.startsWith("#EXT-X-KEY:METHOD=NONE")) continue;
-                // 如果头部直接带的是广告的 EXT-X-KEY，则跳过
-                if (upperLine.startsWith("#EXT-X-KEY") && adKeywords.test(line)) continue;
                 outputLines.push(line);
                 continue;
             }
         }
 
-        // 2. 时长标签暂存
+        // 4. 时长标签暂存待判
         if (upperLine.startsWith("#EXTINF")) {
             pendingExtinf = line;
             continue;
         }
 
-        // 3. 切片路径过滤
+        // 5. 切片路径判定与清洗
         if (!line.startsWith("#")) {
             if (adKeywords.test(line)) {
+                // 命中广告切片，废弃对应的 EXTINF
                 pendingExtinf = null;
             } else {
                 if (pendingExtinf) {
@@ -59,12 +69,14 @@ if (typeof body === "string" && body.toUpperCase().indexOf("#EXTM3U") !== -1) {
             continue;
         }
 
-        // 4. 断点标签过滤
+        // 6. 断点标签 (#EXT-X-DISCONTINUITY) 深度前瞻探测
         if (upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
             let isAdSection = false;
-            for (let j = i + 1; j < Math.min(i + 6, lines.length); j++) {
+            // 扩大前瞻范围至 15 行，确保能越过 EXTINF 探测到切片 URL
+            for (let j = i + 1; j < Math.min(i + 16, lines.length); j++) {
                 let testLine = lines[j].trim();
-                if (testLine.toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) break;
+                let upperTest = testLine.toUpperCase();
+                if (upperTest.startsWith("#EXT-X-DISCONTINUITY")) break;
                 if (adKeywords.test(testLine)) {
                     isAdSection = true;
                     break;
@@ -75,6 +87,7 @@ if (typeof body === "string" && body.toUpperCase().indexOf("#EXTM3U") !== -1) {
                 continue;
             }
 
+            // 防止正片开头或相邻位置留下冗余连续的 DISCONTINUITY
             if (outputLines.length > 0 && outputLines[outputLines.length - 1].toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) {
                 continue;
             }
@@ -83,17 +96,7 @@ if (typeof body === "string" && body.toUpperCase().indexOf("#EXTM3U") !== -1) {
             continue;
         }
 
-        // 5. 解密 Key 过滤与保护
-        if (upperLine.startsWith("#EXT-X-KEY")) {
-            // 过滤广告专属 Key（如含特征字符或 METHOD=NONE）
-            if (adKeywords.test(line) || upperLine.includes("METHOD=NONE")) {
-                continue;
-            }
-            outputLines.push(line);
-            continue;
-        }
-
-        // 6. 其他标签原样保留
+        // 7. 正片正常 Key 及其它元数据原样保留
         outputLines.push(line);
     }
 
