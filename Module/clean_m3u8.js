@@ -10,8 +10,8 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
     const rawLines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 广告特征关键词库（全面扩充：新增 a6b9d4136946ad41、seg_ 等特征）
-    const adKeywords = /(9641kb|Zse0Tpg8|seg_iif|seg_|9c08cdc|a6b9d4136946ad41|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
+    // 广告特征关键词库（已追加 a0fd38、\/stream\/ 等特征）
+    const adKeywords = /(9641kb|Zse0Tpg8|seg_iif|seg_|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
 
     let pendingExtinf = null;
     let pendingDiscontinuity = false;
@@ -27,7 +27,7 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
             continue;
         }
 
-        // 2. 彻底剔除 METHOD=NONE（正片绝不需要，纯粹是广告占位）
+        // 2. 彻底剔除 METHOD=NONE
         if (upperLine.startsWith("#EXT-X-KEY") && upperLine.includes("METHOD=NONE")) {
             continue;
         }
@@ -37,7 +37,7 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
             continue;
         }
 
-        // 4. 暂存断点标签，避免广告导致的空断点
+        // 4. 暂存断点标签，避免广告导致的残留空断点
         if (upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
             pendingDiscontinuity = true;
             continue;
@@ -52,12 +52,11 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
         // 6. 处理切片 URL
         if (!line.startsWith("#")) {
             if (adKeywords.test(line)) {
-                // 命中广告切片：直接吞掉对应的 EXTINF，不输出！
+                // 命中广告切片：清除时长标签与紧邻断点
                 pendingExtinf = null;
-                // 标记为广告后，断点也作废
                 pendingDiscontinuity = false;
             } else {
-                // 正片切片：按需输出断点、EXTINF 和 切片 URL
+                // 正片切片：按需输出断点、EXTINF 和切片路径
                 if (pendingDiscontinuity) {
                     if (outputLines.length > 0 && !outputLines[outputLines.length - 1].toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) {
                         outputLines.push("#EXT-X-DISCONTINUITY");
