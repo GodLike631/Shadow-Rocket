@@ -1,14 +1,17 @@
 #!name = 聚合影视 M3U8 贴片去广告合集
-#!desc = 自动清洗 CKZY、午夜、2026/2608系列、THM3U8、红山(hwzcfz) 等采集站 M3U8 列表开头的 TS/图片切片广告
+#!desc = 自动清洗各采集站 M3U8 列表开头的 TS/图片切片广告及分流优化
 #!author = 🦋 蝴蝶影视
 #!tag = 去广告, 流媒体
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Video.png
+# Telegram群组：https://t.me/tvshare23
 
 [Rule]
+# ==================== 1. 采集站切片去广告目标源 (DIRECT) ====================
 # --- CKZY ---
 DOMAIN-SUFFIX,ckzy3.com,DIRECT
 DOMAIN-SUFFIX,ckzyc.vip,DIRECT
 DOMAIN-SUFFIX,ptt01.com,DIRECT
+DOMAIN-KEYWORD,ptt01,DIRECT
 
 # --- 午夜影视 ---
 DOMAIN-SUFFIX,cdn-xj.cc,DIRECT
@@ -37,6 +40,87 @@ DOMAIN-SUFFIX,hwzcfz.com,DIRECT
 DOMAIN-SUFFIX,erlgnf.com,DIRECT
 DOMAIN-SUFFIX,gmttj.com,DIRECT
 DOMAIN-SUFFIX,yzn6b.xyz,DIRECT
+
+# ==================== 2. 采集站媒体切片与视频源 CDN (DIRECT) ====================
+# --- 非凡 / 量子 / 暴风 / 索尼 / 极速等切片（防403权限拒绝） ---
+DOMAIN-SUFFIX,yzzy.play-cdn7.com,DIRECT
+DOMAIN-SUFFIX,bfzycdn.com,DIRECT
+DOMAIN-SUFFIX,vip.ffzy-online.com,DIRECT
+DOMAIN-SUFFIX,ffzy-play.com,DIRECT
+DOMAIN-SUFFIX,ffzyread.com,DIRECT
+DOMAIN-SUFFIX,ffzyread1.com,DIRECT
+DOMAIN-SUFFIX,ffzycdn.com,DIRECT
+DOMAIN-SUFFIX,lzcdn.com,DIRECT
+DOMAIN-SUFFIX,snscache.com,DIRECT
+DOMAIN-SUFFIX,ikzybf.com,DIRECT
+DOMAIN-SUFFIX,modujx.com,DIRECT
+DOMAIN-SUFFIX,hhplayer.com,DIRECT
+DOMAIN-KEYWORD,ffzy,DIRECT
+DOMAIN-KEYWORD,bfzy,DIRECT
+
+# ==================== 3. 聚合站点与短剧业务源 (DIRECT) ====================
+# --- 七猫短剧 ---
+DOMAIN-SUFFIX,bedfpk.cn,DIRECT
+DOMAIN-SUFFIX,7maoduanju.com,DIRECT
+DOMAIN,7cat-media.bedfpk.cn,DIRECT
+DOMAIN,7cat-pic.bedfpk.cn,DIRECT
+
+# --- 片吧影院 & 主流视频平台切片解析 ---
+DOMAIN-SUFFIX,pbpb.tv,DIRECT
+DOMAIN-KEYWORD,pbpb,DIRECT
+DOMAIN-SUFFIX,mgtv.com,DIRECT
+DOMAIN-SUFFIX,qiyi.com,DIRECT
+DOMAIN-SUFFIX,v.qq.com,DIRECT
+DOMAIN-SUFFIX,youku.com,DIRECT
+
+# --- 猫又影视 ---
+DOMAIN-SUFFIX,imaoyou.net,DIRECT
+DOMAIN-KEYWORD,imaoyou,DIRECT
+
+# --- 一直看 ---
+DOMAIN-SUFFIX,yizk.net,DIRECT
+DOMAIN-SUFFIX,7kan.net,DIRECT
+DOMAIN-SUFFIX,10sky.cc,DIRECT
+DOMAIN-SUFFIX,1zk8.com,DIRECT
+DOMAIN-SUFFIX,5kan.net,DIRECT
+DOMAIN-SUFFIX,1zk.me,DIRECT
+DOMAIN-SUFFIX,1zk.top,DIRECT
+DOMAIN-SUFFIX,1zk.app,DIRECT
+DOMAIN-SUFFIX,54kk.net,DIRECT
+DOMAIN-SUFFIX,10sg.cc,DIRECT
+DOMAIN-SUFFIX,hs130.top,DIRECT
+DOMAIN-SUFFIX,98jpg.vip,DIRECT
+DOMAIN-SUFFIX,98jpg1.vip,DIRECT
+DOMAIN-SUFFIX,hs100.top,DIRECT
+
+# --- 浮生影视 ---
+DOMAIN,tv.fushengr.cc,DIRECT
+DOMAIN-SUFFIX,fushengr.cc,DIRECT
+DOMAIN-SUFFIX,madou2025.com,DIRECT
+DOMAIN-SUFFIX,kpw2026.com,DIRECT
+DOMAIN,d32bg2g0w9aqg4.cloudfront.net,DIRECT
+DOMAIN,vsdsq.tjacq.com,DIRECT
+DOMAIN-SUFFIX,tjacq.com,DIRECT
+
+# --- CartoonPorno ---
+DOMAIN-SUFFIX,cartoonporno.cc,DIRECT
+DOMAIN-SUFFIX,cartoonporno.xxx,DIRECT
+DOMAIN-SUFFIX,x99dh.com,DIRECT
+DOMAIN-SUFFIX,x99dh.vip,DIRECT
+DOMAIN-SUFFIX,x99dh.my,DIRECT
+DOMAIN-SUFFIX,x99dh.cc,DIRECT
+DOMAIN-SUFFIX,x99dh.one,DIRECT
+DOMAIN-SUFFIX,71352.men,DIRECT
+DOMAIN,vcdn1.cartoonporno.cc,DIRECT
+DOMAIN,cdn-pic.cartoonporno.cc,DIRECT
+
+# --- 香蕉短剧 (静态资源直连) ---
+DOMAIN-SUFFIX,wtayty.cn,DIRECT
+
+# ==================== 4. 强制代理分流规则 (PROXY) ====================
+# --- 香蕉短剧 主站与发布页 ---
+DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
+DOMAIN-SUFFIX,xiangjiao01.com,PROXY
 
 [Script]
 http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
