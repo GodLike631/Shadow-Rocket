@@ -4,7 +4,7 @@
 #!tag = 去广告, 流媒体
 #!icon = https://lytvs.top/py/hdys.jpg
 # Telegram群组：https://t.me/tvshare23
-# 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫
+# 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频
 
 [Rule]
 # == 1. 采集站切片去广告目标源 (DIRECT) ==
@@ -35,6 +35,11 @@ DOMAIN-SUFFIX,cdn202608.com,DIRECT
 DOMAIN-SUFFIX,18j2026.com,DIRECT
 DOMAIN-SUFFIX,jlm14.cc,DIRECT
 DOMAIN-SUFFIX,sryndbsfvd.com,DIRECT
+
+# --- GDD视频 系列源 ---
+DOMAIN-SUFFIX,iuewgnbvk.com,DIRECT
+DOMAIN-SUFFIX,tsbfask.com,DIRECT
+DOMAIN-SUFFIX,gdd4.pics,DIRECT
 
 # --- 桃花系列源 (THM3U8) ---
 DOMAIN-SUFFIX,thm3u8.vip,DIRECT
@@ -123,7 +128,7 @@ DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
 
 [Script]
-http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|cdn202608\.com|sryndbsfvd\.com|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
+http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
 
 [Mitm]
-hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.hwzcfz.com, hwzcfz.com
+hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.iuewgnbvk.com, iuewgnbvk.com, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.hwzcfz.com, hwzcfz.com
