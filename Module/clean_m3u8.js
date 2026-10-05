@@ -1,6 +1,6 @@
 /**
  * 影视 M3U8 通用去广告脚本（切片颗粒度级清洗版）
- * 兼容: Surge / Shadowrocket / Loon / Quantumult X
+ * 兼容: Surge / Loon / Quantumult X
  * Telegram群组：https://t.me/tvshare23
  */
 
@@ -10,8 +10,8 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
     const rawLines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 广告特征关键词库（已追加 a0fd38、\/stream\/ 等特征）
-    const adKeywords = /(9641kb|Zse0Tpg8|seg_iif|seg_|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
+    // 广告特征关键词库（已追加 30EjJFTT、10141kb 等特征）
+    const adKeywords = /(9641kb|10141kb|30EjJFTT|Zse0Tpg8|seg_iif|seg_|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
 
     let pendingExtinf = null;
     let pendingDiscontinuity = false;
@@ -37,7 +37,7 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
             continue;
         }
 
-        // 4. 暂存断点标签，避免广告导致的残留空断点
+        // 4. 暂存断点标签
         if (upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
             pendingDiscontinuity = true;
             continue;
