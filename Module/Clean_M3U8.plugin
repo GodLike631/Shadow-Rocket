@@ -1,129 +1,107 @@
-#!name = 聚合影视 M3U8 贴片去广告合集
-#!desc = 自动清洗各采集站 M3U8 列表开头的 TS/图片切片广告及分流优化
-#!author = 🦋 蝴蝶影视
-#!tag = 去广告, 流媒体
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Video.png
-# Telegram群组：https://t.me/tvshare23
+/**
+ * 影视 M3U8 通用去广告脚本（分块状态机终极稳定版）
+ * 兼容: Surge / Shadowrocket / Loon / Quantumult X
+ * Telegram群组：https://t.me/tvshare23
+ */
 
-[Rule]
-# ==================== 1. 采集站切片去广告目标源 (DIRECT) ====================
-# --- CKZY ---
-DOMAIN-SUFFIX,ckzy3.com,DIRECT
-DOMAIN-SUFFIX,ckzyc.vip,DIRECT
-DOMAIN-SUFFIX,ptt01.com,DIRECT
-DOMAIN-KEYWORD,ptt01,DIRECT
+let body = $response.body;
 
-# --- 午夜影视 ---
-DOMAIN-SUFFIX,cdn-xj.cc,DIRECT
-DOMAIN-SUFFIX,cdn-99.cc,DIRECT
-DOMAIN-SUFFIX,wuye.mom,DIRECT
-DOMAIN-SUFFIX,wuyeys.com,DIRECT
-DOMAIN,xn--5us888dtla.wuye.mom,DIRECT
-DOMAIN-SUFFIX,lprk.cc,DIRECT
-DOMAIN,qweqwe.lprk.cc,DIRECT
-DOMAIN-SUFFIX,mtzy2.com,DIRECT
+if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
+    // 归一化换行符
+    const rawLines = body.replace(/\r/g, "").split("\n");
+    const outputLines = [];
 
-# --- 2026 / 2608 系列源（森林 / FHV / 大地 / XBV 等） ---
-DOMAIN-SUFFIX,senlin2026.com,DIRECT
-DOMAIN-SUFFIX,fhv2026.com,DIRECT
-DOMAIN-SUFFIX,dadi2026.com,DIRECT
-DOMAIN-SUFFIX,txcy-emo.buzz,DIRECT
-DOMAIN-SUFFIX,xbv2608.com,DIRECT
-DOMAIN-SUFFIX,bclxsu.top,DIRECT
+    // 广告特征库（已包含全部历史特征）
+    const adKeywords = /(9641kb|Zse0Tpg8|seg_iif|9c08cdc|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
 
-# --- 桃花系列源 (THM3U8) ---
-DOMAIN-SUFFIX,thm3u8.vip,DIRECT
-DOMAIN-SUFFIX,thts4.top,DIRECT
+    let inHeader = true;
+    let currentBlock = [];
+    let blockHasAd = false;
 
-# --- 红山/新源 (hwzcfz) 系列 ---
-DOMAIN-SUFFIX,hwzcfz.com,DIRECT
-DOMAIN-SUFFIX,erlgnf.com,DIRECT
-DOMAIN-SUFFIX,gmttj.com,DIRECT
-DOMAIN-SUFFIX,yzn6b.xyz,DIRECT
+    // 提交当前块数据的辅助函数
+    function flushBlock() {
+        if (!blockHasAd && currentBlock.length > 0) {
+            for (let k = 0; k < currentBlock.length; k++) {
+                outputLines.push(currentBlock[k]);
+            }
+        }
+        currentBlock = [];
+        blockHasAd = false;
+    }
 
-# ==================== 2. 采集站媒体切片与视频源 CDN (DIRECT) ====================
-# --- 非凡 / 量子 / 暴风 / 索尼 / 极速等切片（防403权限拒绝） ---
-DOMAIN-SUFFIX,yzzy.play-cdn7.com,DIRECT
-DOMAIN-SUFFIX,bfzycdn.com,DIRECT
-DOMAIN-SUFFIX,vip.ffzy-online.com,DIRECT
-DOMAIN-SUFFIX,ffzy-play.com,DIRECT
-DOMAIN-SUFFIX,ffzyread.com,DIRECT
-DOMAIN-SUFFIX,ffzyread1.com,DIRECT
-DOMAIN-SUFFIX,ffzycdn.com,DIRECT
-DOMAIN-SUFFIX,lzcdn.com,DIRECT
-DOMAIN-SUFFIX,snscache.com,DIRECT
-DOMAIN-SUFFIX,ikzybf.com,DIRECT
-DOMAIN-SUFFIX,modujx.com,DIRECT
-DOMAIN-SUFFIX,hhplayer.com,DIRECT
-DOMAIN-KEYWORD,ffzy,DIRECT
-DOMAIN-KEYWORD,bfzy,DIRECT
+    for (let i = 0; i < rawLines.length; i++) {
+        let line = rawLines[i].trim();
+        if (!line) continue;
 
-# ==================== 3. 聚合站点与短剧业务源 (DIRECT) ====================
-# --- 七猫短剧 ---
-DOMAIN-SUFFIX,bedfpk.cn,DIRECT
-DOMAIN-SUFFIX,7maoduanju.com,DIRECT
-DOMAIN,7cat-media.bedfpk.cn,DIRECT
-DOMAIN,7cat-pic.bedfpk.cn,DIRECT
+        let upperLine = line.toUpperCase();
 
-# --- 片吧影院 & 主流视频平台切片解析 ---
-DOMAIN-SUFFIX,pbpb.tv,DIRECT
-DOMAIN-KEYWORD,pbpb,DIRECT
-DOMAIN-SUFFIX,mgtv.com,DIRECT
-DOMAIN-SUFFIX,qiyi.com,DIRECT
-DOMAIN-SUFFIX,v.qq.com,DIRECT
-DOMAIN-SUFFIX,youku.com,DIRECT
+        // 1. 过滤干扰混淆标签
+        if (upperLine.startsWith("#DISC-NOISE")) {
+            continue;
+        }
 
-# --- 猫又影视 ---
-DOMAIN-SUFFIX,imaoyou.net,DIRECT
-DOMAIN-KEYWORD,imaoyou,DIRECT
+        // 2. 头部元数据区（在遇到第一个切片、第一个断点或密钥前）
+        if (inHeader) {
+            if (upperLine.startsWith("#EXTINF") || upperLine.startsWith("#EXT-X-DISCONTINUITY") || upperLine.startsWith("#EXT-X-KEY")) {
+                inHeader = false;
+                // 转入块处理逻辑
+            } else {
+                outputLines.push(line);
+                continue;
+            }
+        }
 
-# --- 一直看 ---
-DOMAIN-SUFFIX,yizk.net,DIRECT
-DOMAIN-SUFFIX,7kan.net,DIRECT
-DOMAIN-SUFFIX,10sky.cc,DIRECT
-DOMAIN-SUFFIX,1zk8.com,DIRECT
-DOMAIN-SUFFIX,5kan.net,DIRECT
-DOMAIN-SUFFIX,1zk.me,DIRECT
-DOMAIN-SUFFIX,1zk.top,DIRECT
-DOMAIN-SUFFIX,1zk.app,DIRECT
-DOMAIN-SUFFIX,54kk.net,DIRECT
-DOMAIN-SUFFIX,10sg.cc,DIRECT
-DOMAIN-SUFFIX,hs130.top,DIRECT
-DOMAIN-SUFFIX,98jpg.vip,DIRECT
-DOMAIN-SUFFIX,98jpg1.vip,DIRECT
-DOMAIN-SUFFIX,hs100.top,DIRECT
+        // 3. 遇到断点标签：标志着上一个块结束，新块开始
+        if (upperLine.startsWith("#EXT-X-DISCONTINUITY")) {
+            flushBlock();
+            // 先不把 DISCONTINUITY 放进新块，等确认新块是非广告块后再决定是否保留
+            continue;
+        }
 
-# --- 浮生影视 ---
-DOMAIN,tv.fushengr.cc,DIRECT
-DOMAIN-SUFFIX,fushengr.cc,DIRECT
-DOMAIN-SUFFIX,madou2025.com,DIRECT
-DOMAIN-SUFFIX,kpw2026.com,DIRECT
-DOMAIN,d32bg2g0w9aqg4.cloudfront.net,DIRECT
-DOMAIN,vsdsq.tjacq.com,DIRECT
-DOMAIN-SUFFIX,tjacq.com,DIRECT
+        // 4. 块内属性探测与收集
+        if (upperLine.startsWith("#EXT-X-KEY:METHOD=NONE")) {
+            // 广告块通常带有 METHOD=NONE，不压入正片流
+            continue;
+        }
 
-# --- CartoonPorno ---
-DOMAIN-SUFFIX,cartoonporno.cc,DIRECT
-DOMAIN-SUFFIX,cartoonporno.xxx,DIRECT
-DOMAIN-SUFFIX,x99dh.com,DIRECT
-DOMAIN-SUFFIX,x99dh.vip,DIRECT
-DOMAIN-SUFFIX,x99dh.my,DIRECT
-DOMAIN-SUFFIX,x99dh.cc,DIRECT
-DOMAIN-SUFFIX,x99dh.one,DIRECT
-DOMAIN-SUFFIX,71352.men,DIRECT
-DOMAIN,vcdn1.cartoonporno.cc,DIRECT
-DOMAIN,cdn-pic.cartoonporno.cc,DIRECT
+        // 检测 Key 是否含广告特征
+        if (upperLine.startsWith("#EXT-X-KEY") && adKeywords.test(line)) {
+            blockHasAd = true;
+            continue;
+        }
 
-# --- 香蕉短剧 (静态资源直连) ---
-DOMAIN-SUFFIX,wtayty.cn,DIRECT
+        // 检测切片 URL 是否含广告特征
+        if (!line.startsWith("#")) {
+            if (adKeywords.test(line)) {
+                blockHasAd = true;
+            }
+        }
 
-# ==================== 4. 强制代理分流规则 (PROXY) ====================
-# --- 香蕉短剧 主站与发布页 ---
-DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
-DOMAIN-SUFFIX,xiangjiao01.com,PROXY
+        currentBlock.push(line);
+    }
 
-[Script]
-http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
+    // 刷出最后一个块
+    flushBlock();
 
-[Mitm]
-hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.hwzcfz.com, hwzcfz.com
+    // 4. 结尾规范化与双重断点清理
+    const finalLines = [];
+    for (let j = 0; j < outputLines.length; j++) {
+        let l = outputLines[j];
+        // 清除开头多余的 DISCONTINUITY
+        if (finalLines.length === 0 && l.toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) {
+            continue;
+        }
+        // 清除连续重复的 DISCONTINUITY
+        if (l.toUpperCase().startsWith("#EXT-X-DISCONTINUITY") && 
+            finalLines.length > 0 && 
+            finalLines[finalLines.length - 1].toUpperCase().startsWith("#EXT-X-DISCONTINUITY")) {
+            continue;
+        }
+        finalLines.push(l);
+    }
+
+    body = finalLines.join("\n");
+}
+
+// 统一标准输出，防止跨客户端兼容性问题
+$done({ body: body });
