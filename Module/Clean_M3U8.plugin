@@ -23,13 +23,16 @@ DOMAIN-SUFFIX,lprk.cc,DIRECT
 DOMAIN,qweqwe.lprk.cc,DIRECT
 DOMAIN-SUFFIX,mtzy2.com,DIRECT
 
-# --- 2026 / 2608 系列源（森林 / FHV / 大地 / XBV 等） ---
+# --- 2026 / 2608 / cdn202608 系列源 ---
 DOMAIN-SUFFIX,senlin2026.com,DIRECT
 DOMAIN-SUFFIX,fhv2026.com,DIRECT
 DOMAIN-SUFFIX,dadi2026.com,DIRECT
 DOMAIN-SUFFIX,txcy-emo.buzz,DIRECT
 DOMAIN-SUFFIX,xbv2608.com,DIRECT
 DOMAIN-SUFFIX,bclxsu.top,DIRECT
+DOMAIN-SUFFIX,cdn202608.com,DIRECT
+DOMAIN-SUFFIX,18j2026.com,DIRECT
+DOMAIN-SUFFIX,jlm14.cc,DIRECT
 
 # --- 桃花系列源 (THM3U8) ---
 DOMAIN-SUFFIX,thm3u8.vip,DIRECT
@@ -42,7 +45,6 @@ DOMAIN-SUFFIX,gmttj.com,DIRECT
 DOMAIN-SUFFIX,yzn6b.xyz,DIRECT
 
 # == 2. 采集站媒体切片与视频源 CDN (DIRECT) ==
-# --- 非凡 / 量子 / 暴风 / 索尼 / 极速等切片（防403权限拒绝） ---
 DOMAIN-SUFFIX,yzzy.play-cdn7.com,DIRECT
 DOMAIN-SUFFIX,bfzycdn.com,DIRECT
 DOMAIN-SUFFIX,vip.ffzy-online.com,DIRECT
@@ -59,25 +61,18 @@ DOMAIN-KEYWORD,ffzy,DIRECT
 DOMAIN-KEYWORD,bfzy,DIRECT
 
 # ==================== 3. 聚合站点与短剧业务源 (DIRECT) ====================
-# --- 七猫短剧 ---
 DOMAIN-SUFFIX,bedfpk.cn,DIRECT
 DOMAIN-SUFFIX,7maoduanju.com,DIRECT
 DOMAIN,7cat-media.bedfpk.cn,DIRECT
 DOMAIN,7cat-pic.bedfpk.cn,DIRECT
-
-# --- 片吧影院 & 主流视频平台切片解析 ---
 DOMAIN-SUFFIX,pbpb.tv,DIRECT
 DOMAIN-KEYWORD,pbpb,DIRECT
 DOMAIN-SUFFIX,mgtv.com,DIRECT
 DOMAIN-SUFFIX,qiyi.com,DIRECT
 DOMAIN-SUFFIX,v.qq.com,DIRECT
 DOMAIN-SUFFIX,youku.com,DIRECT
-
-# --- 猫又影视 ---
 DOMAIN-SUFFIX,imaoyou.net,DIRECT
 DOMAIN-KEYWORD,imaoyou,DIRECT
-
-# --- 一直看 ---
 DOMAIN-SUFFIX,yizk.net,DIRECT
 DOMAIN-SUFFIX,7kan.net,DIRECT
 DOMAIN-SUFFIX,10sky.cc,DIRECT
@@ -92,8 +87,6 @@ DOMAIN-SUFFIX,hs130.top,DIRECT
 DOMAIN-SUFFIX,98jpg.vip,DIRECT
 DOMAIN-SUFFIX,98jpg1.vip,DIRECT
 DOMAIN-SUFFIX,hs100.top,DIRECT
-
-# --- 浮生影视 ---
 DOMAIN,tv.fushengr.cc,DIRECT
 DOMAIN-SUFFIX,fushengr.cc,DIRECT
 DOMAIN-SUFFIX,madou2025.com,DIRECT
@@ -101,8 +94,6 @@ DOMAIN-SUFFIX,kpw2026.com,DIRECT
 DOMAIN,d32bg2g0w9aqg4.cloudfront.net,DIRECT
 DOMAIN,vsdsq.tjacq.com,DIRECT
 DOMAIN-SUFFIX,tjacq.com,DIRECT
-
-# --- CartoonPorno ---
 DOMAIN-SUFFIX,cartoonporno.cc,DIRECT
 DOMAIN-SUFFIX,cartoonporno.xxx,DIRECT
 DOMAIN-SUFFIX,x99dh.com,DIRECT
@@ -113,35 +104,24 @@ DOMAIN-SUFFIX,x99dh.one,DIRECT
 DOMAIN-SUFFIX,71352.men,DIRECT
 DOMAIN,vcdn1.cartoonporno.cc,DIRECT
 DOMAIN,cdn-pic.cartoonporno.cc,DIRECT
-
-# --- 暗夜蜜桃 (honeypeach.cc) ---
 DOMAIN-SUFFIX,honeypeach.cc,DIRECT
 DOMAIN-SUFFIX,golds1.top,DIRECT
 IP-CIDR,45.200.14.213/32,DIRECT,no-resolve
-
-# 正片与图片分发 CDN
 DOMAIN-SUFFIX,cloudfront.net,DIRECT
-
-# 动漫上游流媒体 (Hanime / HS日本4K动漫)
 DOMAIN,vdownload.hembed.com,DIRECT
 DOMAIN-SUFFIX,hembed.com,DIRECT
 DOMAIN-SUFFIX,hanime1.me,DIRECT
 DOMAIN-SUFFIX,hstream.moe,DIRECT
-
-# 视频与直播上游节点
 DOMAIN-KEYWORD,missav,DIRECT
 DOMAIN-KEYWORD,stripchat,DIRECT
-
-# --- 香蕉短剧 (静态资源直连) ---
 DOMAIN-SUFFIX,wtayty.cn,DIRECT
 
 # ==================== 4. 强制代理分流规则 (PROXY) ====================
-# --- 香蕉短剧 主站与发布页 ---
 DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
 
 [Script]
-http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
+http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|cdn202608\.com|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
 
 [Mitm]
-hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.hwzcfz.com, hwzcfz.com
+hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.cdn202608.com, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.hwzcfz.com, hwzcfz.com
