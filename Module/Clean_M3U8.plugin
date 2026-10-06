@@ -4,7 +4,7 @@
 #!tag = 去广告, 流媒体
 #!icon = https://lytvs.top/py/hdys.jpg
 #!Telegram群组：https://t.me/tvshare23
-#!目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频
+#!目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、醉梦春秋、18JSPA
 
 [Rule]
 # == 1. 采集站切片去广告目标源 (DIRECT) ==
@@ -20,6 +20,12 @@ DOMAIN-SUFFIX,cdn202608.com,DIRECT
 DOMAIN,t3.18j61.cc,DIRECT
 DOMAIN,img.cdn202608.com,DIRECT
 DOMAIN,m3u8.cdn202608.com,DIRECT
+
+# 梦醉春秋 爬虫业务与媒体流直连规则集
+DOMAIN-SUFFIX,mzplasmabiotch.ink,DIRECT
+DOMAIN-SUFFIX,abfrkjesk.com,DIRECT
+DOMAIN-SUFFIX,iuewgnbvk.com,DIRECT
+DOMAIN,xn--e6qr77e9twiuh.mzplasmabiotch.ink,DIRECT
 
 # --- 午夜影视 ---
 DOMAIN-SUFFIX,cdn-xj.cc,DIRECT
