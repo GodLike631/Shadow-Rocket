@@ -1,5 +1,5 @@
 /**
- * 影视 M3U8 通用去广告脚本（切片颗粒度级清洗版）
+ * 影视 M3U8 通用去广告脚本（彻底修复同域名误杀版）
  * 兼容: Surge / Loon / Quantumult X
  * Telegram群组：https://t.me/tvshare23
  */
@@ -10,8 +10,8 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
     const rawLines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 广告特征关键词库（已追加 7e14ee319bf8017d、ac080df0b161b6fb 等特征）
-    const adKeywords = /(9641kb|10141kb|1000kb|30EjJFTT|W7fqTmbJ|5568049a638c79f9|ec5db3bbf268dd34|7e14ee319bf8017d|ac080df0b161b6fb|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
+    // 精准广告特征词库（已剔除 cdn-99.cc 避免误杀，改为精准路径 /mov/AD/ 及特征指纹）
+    const adKeywords = /(9641kb|10141kb|1000kb|30EjJFTT|W7fqTmbJ|5568049a638c79f9|ec5db3bbf268dd34|7e14ee319bf8017d|ac080df0b161b6fb|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|\/mov\/AD\/|8jlf67z19|C7bAbClC|erlgnf\.com|adjump)/i;
 
     let pendingExtinf = null;
     let pendingDiscontinuity = false;
