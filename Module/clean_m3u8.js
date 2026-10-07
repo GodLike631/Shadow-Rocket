@@ -1,5 +1,5 @@
 /**
- * 影视 M3U8 通用去广告脚本（修复正片误杀与Key时序版）
+ * 影视 M3U8 通用去广告脚本（切片颗粒度级清洗版）
  * 兼容: Surge / Loon / Quantumult X
  * Telegram群组：https://t.me/tvshare23
  */
@@ -10,8 +10,8 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
     const rawLines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 广告特征关键词库（严禁放宽泛的 seg_，改为精准目录与特征指纹）
-    const adKeywords = /(9641kb|10141kb|1000kb|30EjJFTT|W7fqTmbJ|5568049a638c79f9|ec5db3bbf268dd34|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
+    // 广告特征关键词库（已追加 7e14ee319bf8017d、ac080df0b161b6fb 等特征）
+    const adKeywords = /(9641kb|10141kb|1000kb|30EjJFTT|W7fqTmbJ|5568049a638c79f9|ec5db3bbf268dd34|7e14ee319bf8017d|ac080df0b161b6fb|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|cdn-99\.cc|C7bAbClC|erlgnf\.com|\/ad\/|\/advert\/|adjump)/i;
 
     let pendingExtinf = null;
     let pendingDiscontinuity = false;
@@ -27,7 +27,7 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
             continue;
         }
 
-        // 2. 彻底剔除 METHOD=NONE（广告占位）
+        // 2. 彻底剔除 METHOD=NONE
         if (upperLine.startsWith("#EXT-X-KEY") && upperLine.includes("METHOD=NONE")) {
             continue;
         }
