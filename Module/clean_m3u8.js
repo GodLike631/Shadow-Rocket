@@ -10,8 +10,8 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
     const rawLines = body.replace(/\r/g, "").split("\n");
     const outputLines = [];
 
-    // 精准广告特征词库（全量保留既有特征，安全追加 JKyp1S2D，杜绝模糊误杀）
-    const adKeywords = /(9641kb|10141kb|1000kb|30EjJFTT|W7fqTmbJ|JKyp1S2D|5568049a638c79f9|ec5db3bbf268dd34|7e14ee319bf8017d|ac080df0b161b6fb|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|\/mov\/AD\/|8jlf67z19|C7bAbClC|erlgnf\.com|adjump)/i;
+    // 精准广告特征词库（全量保留既有特征，安全追加 ea6bb8a311db9dd0、1f1d60431202f328，杜绝模糊误杀）
+    const adKeywords = /(9641kb|10141kb|1000kb|30EjJFTT|W7fqTmbJ|JKyp1S2D|5568049a638c79f9|ec5db3bbf268dd34|7e14ee319bf8017d|ac080df0b161b6fb|ea6bb8a311db9dd0|1f1d60431202f328|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|\/mov\/AD\/|8jlf67z19|C7bAbClC|erlgnf\.com|adjump)/i;
 
     let pendingExtinf = null;
     let pendingDiscontinuity = false;
