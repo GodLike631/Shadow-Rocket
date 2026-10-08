@@ -4,7 +4,7 @@
 #!tag = 去广告, 流媒体
 #!icon = https://lytvs.top/py/hdys.jpg
 # Telegram群组：https://t.me/tvshare23
-# 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧
+# 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧、番茄影视
 
 [Rule]
 # == 1. 采集站切片去广告目标源 (DIRECT) ==
@@ -54,6 +54,14 @@ DOMAIN-SUFFIX,myacetweay.buzz,DIRECT
 # --- Vostrely视频 系列源 ---
 DOMAIN-SUFFIX,vostrely.com,DIRECT
 DOMAIN-SUFFIX,tsbfnxx.com,DIRECT
+
+# --- 番茄影视 系列源 ---
+DOMAIN-SUFFIX,fqm3u8.cc,DIRECT
+DOMAIN-SUFFIX,fqts5.top,DIRECT
+DOMAIN-SUFFIX,123sp3.fit,DIRECT
+DOMAIN-SUFFIX,123spz.com,DIRECT
+DOMAIN-SUFFIX,dummyimage.com,DIRECT
+DOMAIN-SUFFIX,aai.123sp8.motorcycles,DIRECT
 
 # --- 桃花系列源 (THM3U8) ---
 DOMAIN-SUFFIX,thm3u8.vip,DIRECT
@@ -143,7 +151,7 @@ DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
 
 [Script]
-http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
+http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|fqm3u8\.cc|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
 
 [Mitm]
-hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.iuewgnbvk.com, iuewgnbvk.com, *.v155p.com, v155p.com, *.jpxm3u8.com, jpxm3u8.com, *.vostrely.com, vostrely.com, *.bfaskcdn.com, bfaskcdn.com, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.thm3u8.co, thm3u8.co, *.hwzcfz.com, hwzcfz.com
+hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.iuewgnbvk.com, iuewgnbvk.com, *.v155p.com, v155p.com, *.jpxm3u8.com, jpxm3u8.com, *.vostrely.com, vostrely.com, *.bfaskcdn.com, bfaskcdn.com, *.fqm3u8.cc, fqm3u8.cc, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.thm3u8.co, thm3u8.co, *.hwzcfz.com, hwzcfz.com
