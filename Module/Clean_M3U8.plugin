@@ -220,6 +220,23 @@ DOMAIN-SUFFIX,allclassic.porn,PROXY
 
 # 关键词兜底
 DOMAIN-KEYWORD,allclassic,PROXY
+# ------LissAV------#
+
+# 核心主站、API 与备用源
+DOMAIN-SUFFIX,madou8.pw,DIRECT
+DOMAIN-SUFFIX,lissav.my,DIRECT
+DOMAIN-SUFFIX,njav01.net,DIRECT
+
+# 封面海报图床 CDN
+DOMAIN-SUFFIX,7132p.cc,DIRECT
+
+# 流媒体直链与切片分发 CDN
+DOMAIN-SUFFIX,vcmathe.com,DIRECT
+
+# 关键词兜底
+DOMAIN-KEYWORD,lissav,DIRECT
+DOMAIN-KEYWORD,madou8,DIRECT
+DOMAIN-KEYWORD,vcmathe,DIRECT
 # ==================== 4. 强制代理分流规则 (PROXY) ====================
 DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
