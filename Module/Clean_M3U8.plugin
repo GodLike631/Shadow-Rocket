@@ -1,8 +1,12 @@
 #!name = 蝴蝶影视 M3U8 贴片去广告合集
 #!desc = 自动清洗各采集站 M3U8 列表开头的 TS/图片切片广告及分流优化
-#!author = 🦋 蝴蝶影视
-#!tag = 去广告, 流媒体
+#!author = @huliys9
+#!homepage = https://t.me/tvshare23
 #!icon = https://lytvs.top/py/hdys.jpg
+#!loon_version = 3.5.2(1005)
+#!tag = 去广告, 流媒体分流
+#!type = normal
+#!date = 2026-10-09 17:16
 # Telegram群组：https://t.me/tvshare23
 # 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧、番茄影视
 
@@ -23,6 +27,7 @@ DOMAIN,xn--5us888dtla.wuye.mom,DIRECT
 DOMAIN-SUFFIX,lprk.cc,DIRECT
 DOMAIN,qweqwe.lprk.cc,DIRECT
 DOMAIN-SUFFIX,mtzy2.com,DIRECT
+DOMAIN-SUFFIX,biglist03.xyz,DIRECT
 
 # --- 2026 / 2608 / cdn202608 / sryndbsfvd 系列源 ---
 DOMAIN-SUFFIX,senlin2026.com,DIRECT
@@ -146,12 +151,83 @@ DOMAIN-KEYWORD,missav,DIRECT
 DOMAIN-KEYWORD,stripchat,DIRECT
 DOMAIN-SUFFIX,wtayty.cn,DIRECT
 
+# --- MissAV 静态直连部分（省流） ---
+DOMAIN-SUFFIX,dummyimage.com,DIRECT
+DOMAIN-SUFFIX,71352.men,DIRECT
+
+# --- MissAV 核心流媒体与主站代理部分 ---
+# 视频流与切片服务器
+DOMAIN-SUFFIX,surrit.com,PROXY
+DOMAIN-SUFFIX,sixyik.com,PROXY
+
+# 主站、镜像与导航
+DOMAIN-SUFFIX,thisav.my,PROXY
+DOMAIN-KEYWORD,missav,PROXY
+
+# ------Hanime1------#
+# 导航与动态发布页
+DOMAIN-SUFFIX,x99dh.cc,DIRECT
+DOMAIN-SUFFIX,x99dh.one,DIRECT
+
+# 封面海报图床 CDN
+DOMAIN-SUFFIX,7132p.cc,DIRECT
+
+# 核心主站、API 与流媒体直链
+DOMAIN-SUFFIX,hanime101.com,DIRECT
+DOMAIN-SUFFIX,hanime1.me,DIRECT
+DOMAIN-SUFFIX,hanime1.com,DIRECT
+
+# 关键词兜底
+DOMAIN-KEYWORD,hanime,DIRECT
+# ------xHamster------#
+
+# 封面海报图床与视频切片 CDN
+DOMAIN-SUFFIX,xhcdn.com,DIRECT
+
+# 核心主站、镜像分流与 API
+DOMAIN-SUFFIX,xhamster1.art,DIRECT
+DOMAIN-SUFFIX,xhamster1.pw,DIRECT
+DOMAIN-SUFFIX,xhamster.com,DIRECT
+
+# 关键词兜底
+DOMAIN-KEYWORD,xhamster,DIRECT
+
+# ------FreePornVideos------#
+# 核心主站、API 与图床 CDN
+DOMAIN-SUFFIX,freepornvideos.xxx,PROXY
+
+# 关键词兜底
+DOMAIN-KEYWORD,freepornvideos,PROXY
+# ------四季老片------#
+# 核心主站与封面图床
+DOMAIN-SUFFIX,vintagepornfun.com,PROXY
+
+# 嵌入播放解析源
+DOMAIN-SUFFIX,bysewihe.com,PROXY
+DOMAIN-SUFFIX,piq.re,PROXY
+
+# Doodstream 核心、动态跳转与鉴权节点
+DOMAIN-SUFFIX,d000d.com,PROXY
+DOMAIN-SUFFIX,playmogo.com,PROXY
+
+# 视频最终直链与切片分发 CDN
+DOMAIN-SUFFIX,cloudatacdn.com,PROXY
+
+# 关键词兜底
+DOMAIN-KEYWORD,vintagepornfun,PROXY
+DOMAIN-KEYWORD,dood,PROXY
+# ------经典老片------#
+# 核心主站、封面图床与流媒体直链 CDN
+DOMAIN-SUFFIX,allclassic.porn,PROXY
+
+# 关键词兜底
+DOMAIN-KEYWORD,allclassic,PROXY
 # ==================== 4. 强制代理分流规则 (PROXY) ====================
 DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
 
 [Script]
+[Script]
 http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|fqm3u8\.cc|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
-
 [Mitm]
 hostname = *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, *2026.com, *2608.com, *.cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.iuewgnbvk.com, iuewgnbvk.com, *.v155p.com, v155p.com, *.jpxm3u8.com, jpxm3u8.com, *.vostrely.com, vostrely.com, *.bfaskcdn.com, bfaskcdn.com, *.fqm3u8.cc, fqm3u8.cc, *.txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.thm3u8.co, thm3u8.co, *.hwzcfz.com, hwzcfz.com
