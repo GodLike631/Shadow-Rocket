@@ -237,6 +237,25 @@ DOMAIN-SUFFIX,vcmathe.com,DIRECT
 DOMAIN-KEYWORD,lissav,DIRECT
 DOMAIN-KEYWORD,madou8,DIRECT
 DOMAIN-KEYWORD,vcmathe,DIRECT
+
+# ------LissAV国产区------#
+
+# 核心主站、API 与流媒体直链分发
+DOMAIN-SUFFIX,madou8.pw,DIRECT
+DOMAIN-SUFFIX,rou666.net,DIRECT
+
+# 封面海报图床 CDN
+DOMAIN-SUFFIX,7132p.cc,DIRECT
+
+# 视频切片分发 CDN 节点集群
+DOMAIN-SUFFIX,vcwaloom.sbs,DIRECT
+DOMAIN-SUFFIX,vcbrhtly.sbs,DIRECT
+
+# 关键词兜底
+DOMAIN-KEYWORD,madou8,DIRECT
+DOMAIN-KEYWORD,rou666,DIRECT
+DOMAIN-KEYWORD,vcwaloom,DIRECT
+DOMAIN-KEYWORD,vcbrhtly,DIRECT
 # ==================== 4. 强制代理分流规则 (PROXY) ====================
 DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
