@@ -1,5 +1,5 @@
 #!name = 蝴蝶影视 M3U8 贴片去广告合集
-#!desc = 自动清洗各采集站 M3U8 列表开头的 TS/图片切片广告及分流优化。\n\n【已收录站点】：\n大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧、番茄影视
+#!desc = 自动清洗各采集站 M3U8 列表开头的 TS/图片切片广告及分流优化。\n\n【已收录站点】：\n大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧、番茄影视、美人姬
 #!author = @huliys9
 #!homepage = https://t.me/tvshare23
 #!icon = https://lytvs.top/py/hdys.jpg
@@ -334,7 +334,9 @@ DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
 
 [Script]
+#通用M3U8广告清洗
 http-response (?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|fqm3u8\.cc|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co)|hwzcfz\.com).*?\.m3u8 script-path = https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js, requires-body = true, timeout = 30, tag = 通用M3U8广告清洗
-http-response ^https?:\/\/(.*\.bcebos\.com|vfile\.meituan\.net|file\.zhuyitai\.com|oss\.zhuyitai\.com|ucloudqn\.unipus\.cn|huaweicloudobs\.ahjxjy\.cn)\/.*\.txt script-path=js/huajie_decrypt.js, requires-body=true, binary-body-mode=true, max-size=3145728, tag=花街海报解密
+#花街海报解密
+http-response ^https?:\/\/(.*\.bcebos\.com|vfile\.meituan\.net|file\.zhuyitai\.com|oss\.zhuyitai\.com|ucloudqn\.unipus\.cn|huaweicloudobs\.ahjxjy\.cn)\/.*\.txt script-path=https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/huajie_decrypt.js, requires-body=true, binary-body-mode=true, max-size=3145728, tag=花街海报解密
 [Mitm]
 hostname = 2608.xbv2608.com, *.xbv2608.com, 2607.xbv2026.com, *.xbv2026.com, picc.sex8sex855.com, *.sex8sex855.com, *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, cdn-xj.cc, *.dadi2026.com, *.fhv2026.com, *.senlin2026.com, *.xbv2608.com, *.cdn202608.com, cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.iuewgnbvk.com, iuewgnbvk.com, *.v155p.com, v155p.com, *.jpxm3u8.com, jpxm3u8.com, *.vostrely.com, vostrely.com, *.bfaskcdn.com, bfaskcdn.com, *.fqm3u8.cc, fqm3u8.cc, *.txcy-emo.buzz, txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.thm3u8.co, thm3u8.co, *.hwzcfz.com, hwzcfz.com, *.bcebos.com, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn, *.91crdjai.com, 91crdjai.com, pic.wirqed.cn, *.wirqed.cn
