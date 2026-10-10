@@ -192,10 +192,10 @@ DOMAIN-KEYWORD,xhamster,DIRECT
 
 # ------FreePornVideos------#
 # 核心主站、API 与图床 CDN
-DOMAIN-SUFFIX,freepornvideos.xxx,🇺🇸 US
+DOMAIN-SUFFIX,freepornvideos.xxx,PROXY
 
 # 关键词兜底
-DOMAIN-KEYWORD,freepornvideos,🇺🇸 US
+DOMAIN-KEYWORD,freepornvideos,PROXY
 # ------四季老片------#
 # 核心主站与封面图床
 DOMAIN-SUFFIX,vintagepornfun.com,PROXY
@@ -216,10 +216,10 @@ DOMAIN-KEYWORD,vintagepornfun,PROXY
 DOMAIN-KEYWORD,dood,PROXY
 # ------经典老片------#
 # 核心主站、封面图床与流媒体直链 CDN
-DOMAIN-SUFFIX,allclassic.porn,🇨🇳 TW
+DOMAIN-SUFFIX,allclassic.porn,🇨🇳 PROXY
 
 # 关键词兜底
-DOMAIN-KEYWORD,allclassic,🇨🇳 TW
+DOMAIN-KEYWORD,allclassic,PROXY
 # ------LissAV------#
 
 # 核心主站、API 与备用源
