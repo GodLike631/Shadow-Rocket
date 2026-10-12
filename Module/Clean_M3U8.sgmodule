@@ -332,10 +332,5 @@ DOMAIN-SUFFIX,91porna.com.com,PROXY
 [Script]
 通用M3U8广告清洗 = type=http-response,pattern=(?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|sex8sex855\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|fqm3u8\.cc|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co)|hwzcfz\.com).*?\.m3u8,script-path=https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js,requires-body=true,max-size=3145728,timeout=30
 
-花街海报解密 = type=http-response,pattern=^https?:\/\/(.*\.bcebos\.com|vfile\.meituan\.net|file\.zhuyitai\.com|oss\.zhuyitai\.com|ucloudqn\.unipus\.cn|huaweicloudobs\.ahjxjy\.cn)\/.*\.txt,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=js/huajie_decrypt.js
-
-
-
-
 [MITM]
 hostname = %APPEND% 2608.xbv2608.com, *.xbv2608.com, 2607.xbv2026.com, *.xbv2026.com, picc.sex8sex855.com, *.sex8sex855.com, *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, cdn-xj.cc, *.dadi2026.com, *.fhv2026.com, *.senlin2026.com, *.xbv2608.com, *.cdn202608.com, cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.iuewgnbvk.com, iuewgnbvk.com, *.v155p.com, v155p.com, *.jpxm3u8.com, jpxm3u8.com, *.vostrely.com, vostrely.com, *.bfaskcdn.com, bfaskcdn.com, *.fqm3u8.cc, fqm3u8.cc, *.txcy-emo.buzz, txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.thm3u8.co, thm3u8.co, *.hwzcfz.com, hwzcfz.com, *.bcebos.com, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn, pic.wirqed.cn, *.wirqed.cn, wirqed.cn, wirqed.cn, 2609.lbsl2026.com, *.lbsl2026.com
