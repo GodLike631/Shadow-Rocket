@@ -326,6 +326,21 @@ DOMAIN-SUFFIX,sssrr.org,PROXY
 # 关键词兜底
 DOMAIN-KEYWORD,haijiao,PROXY
 DOMAIN-KEYWORD,abyssplayer,PROXY
+# ------玩物社区------#
+# 核心主站与 API
+DOMAIN-SUFFIX,daqbqrri.cc,PROXY
+
+# 封面海报图床 CDN
+DOMAIN-SUFFIX,wirqed.cn,PROXY
+DOMAIN-SUFFIX,eisees.com,PROXY
+
+# 流媒体直链、切片与分发 CDN
+DOMAIN-SUFFIX,tktjpm.cn,PROXY
+
+# 关键词兜底
+DOMAIN-KEYWORD,daqbqrri,PROXY
+DOMAIN-KEYWORD,wirqed,PROXY
+DOMAIN-KEYWORD,tktjpm,PROXY
 
 
 # ==================== 4. 强制代理分流规则 (PROXY) ====================
