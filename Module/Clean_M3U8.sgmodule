@@ -5,7 +5,6 @@
 # Telegram群组：https://t.me/tvshare23
 # 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧、番茄影视、美人姬、量子/暴风系、陌陌一夜情
 
-
 [Rule]
 # == 1. 采集站切片去广告目标源 (DIRECT) ==
 # --- CKZY ---
@@ -19,9 +18,7 @@ DOMAIN-SUFFIX,cdn-xj.cc,DIRECT
 DOMAIN-SUFFIX,cdn-99.cc,DIRECT
 DOMAIN-SUFFIX,wuye.mom,DIRECT
 DOMAIN-SUFFIX,wuyeys.com,DIRECT
-DOMAIN,xn--5us888dtla.wuye.mom,DIRECT
 DOMAIN-SUFFIX,lprk.cc,DIRECT
-DOMAIN,qweqwe.lprk.cc,DIRECT
 DOMAIN-SUFFIX,mtzy2.com,DIRECT
 DOMAIN-SUFFIX,biglist03.xyz,DIRECT
 
@@ -94,8 +91,6 @@ DOMAIN-KEYWORD,bfzy,DIRECT
 # ==================== 3. 聚合站点与短剧业务源 (DIRECT) ====================
 DOMAIN-SUFFIX,bedfpk.cn,DIRECT
 DOMAIN-SUFFIX,7maoduanju.com,DIRECT
-DOMAIN,7cat-media.bedfpk.cn,DIRECT
-DOMAIN,7cat-pic.bedfpk.cn,DIRECT
 DOMAIN-SUFFIX,pbpb.tv,DIRECT
 DOMAIN-KEYWORD,pbpb,DIRECT
 DOMAIN-SUFFIX,mgtv.com,DIRECT
@@ -118,12 +113,10 @@ DOMAIN-SUFFIX,hs130.top,DIRECT
 DOMAIN-SUFFIX,98jpg.vip,DIRECT
 DOMAIN-SUFFIX,98jpg1.vip,DIRECT
 DOMAIN-SUFFIX,hs100.top,DIRECT
-DOMAIN,tv.fushengr.cc,DIRECT
 DOMAIN-SUFFIX,fushengr.cc,DIRECT
 DOMAIN-SUFFIX,madou2025.com,DIRECT
 DOMAIN-SUFFIX,kpw2026.com,DIRECT
 DOMAIN,d32bg2g0w9aqg4.cloudfront.net,DIRECT
-DOMAIN,vsdsq.tjacq.com,DIRECT
 DOMAIN-SUFFIX,tjacq.com,DIRECT
 DOMAIN-SUFFIX,cartoonporno.cc,DIRECT
 DOMAIN-SUFFIX,cartoonporno.xxx,DIRECT
@@ -133,13 +126,10 @@ DOMAIN-SUFFIX,x99dh.my,DIRECT
 DOMAIN-SUFFIX,x99dh.cc,DIRECT
 DOMAIN-SUFFIX,x99dh.one,DIRECT
 DOMAIN-SUFFIX,71352.men,DIRECT
-DOMAIN,vcdn1.cartoonporno.cc,DIRECT
-DOMAIN,cdn-pic.cartoonporno.cc,DIRECT
 DOMAIN-SUFFIX,honeypeach.cc,DIRECT
 DOMAIN-SUFFIX,golds1.top,DIRECT
 IP-CIDR,45.200.14.213/32,DIRECT,no-resolve
 DOMAIN-SUFFIX,cloudfront.net,DIRECT
-DOMAIN,vdownload.hembed.com,DIRECT
 DOMAIN-SUFFIX,hembed.com,DIRECT
 DOMAIN-SUFFIX,hanime1.me,DIRECT
 DOMAIN-SUFFIX,hstream.moe,DIRECT
@@ -154,10 +144,6 @@ DOMAIN-SUFFIX,voddadaizi6.com,DIRECT
 DOMAIN-SUFFIX,ckbhm3u8.com,DIRECT
 DOMAIN-SUFFIX,ckts2.top,DIRECT
 
-# --- MissAV 静态直连部分（省流） ---
-DOMAIN-SUFFIX,dummyimage.com,DIRECT
-DOMAIN-SUFFIX,71352.men,DIRECT
-
 # --- MissAV 核心流媒体与主站代理部分 ---
 # 视频流与切片服务器
 DOMAIN-SUFFIX,surrit.com,PROXY
@@ -168,22 +154,17 @@ DOMAIN-SUFFIX,thisav.my,PROXY
 DOMAIN-KEYWORD,missav,PROXY
 
 # ------Hanime1------#
-# 导航与动态发布页
-DOMAIN-SUFFIX,x99dh.cc,DIRECT
-DOMAIN-SUFFIX,x99dh.one,DIRECT
-
 # 封面海报图床 CDN
 DOMAIN-SUFFIX,7132p.cc,DIRECT
 
 # 核心主站、API 与流媒体直链
 DOMAIN-SUFFIX,hanime101.com,DIRECT
-DOMAIN-SUFFIX,hanime1.me,DIRECT
 DOMAIN-SUFFIX,hanime1.com,DIRECT
 
 # 关键词兜底
 DOMAIN-KEYWORD,hanime,DIRECT
-# ------xHamster------#
 
+# ------xHamster------#
 # 封面海报图床与视频切片 CDN
 DOMAIN-SUFFIX,xhcdn.com,DIRECT
 
@@ -201,6 +182,7 @@ DOMAIN-SUFFIX,freepornvideos.xxx,PROXY
 
 # 关键词兜底
 DOMAIN-KEYWORD,freepornvideos,PROXY
+
 # ------四季老片------#
 # 核心主站与封面图床
 DOMAIN-SUFFIX,vintagepornfun.com,PROXY
@@ -219,21 +201,19 @@ DOMAIN-SUFFIX,cloudatacdn.com,PROXY
 # 关键词兜底
 DOMAIN-KEYWORD,vintagepornfun,PROXY
 DOMAIN-KEYWORD,dood,PROXY
+
 # ------经典老片------#
 # 核心主站、封面图床与流媒体直链 CDN
 DOMAIN-SUFFIX,allclassic.porn,PROXY
 
 # 关键词兜底
 DOMAIN-KEYWORD,allclassic,PROXY
-# ------LissAV------#
 
+# ------LissAV------#
 # 核心主站、API 与备用源
 DOMAIN-SUFFIX,madou8.pw,DIRECT
 DOMAIN-SUFFIX,lissav.my,DIRECT
 DOMAIN-SUFFIX,njav01.net,DIRECT
-
-# 封面海报图床 CDN
-DOMAIN-SUFFIX,7132p.cc,DIRECT
 
 # 流媒体直链与切片分发 CDN
 DOMAIN-SUFFIX,vcmathe.com,DIRECT
@@ -242,27 +222,19 @@ DOMAIN-SUFFIX,vcmathe.com,DIRECT
 DOMAIN-KEYWORD,lissav,DIRECT
 DOMAIN-KEYWORD,madou8,DIRECT
 DOMAIN-KEYWORD,vcmathe,DIRECT
+
 # ------LissAV国产区------#
-
 # 核心主站、API 与流媒体直链分发
-DOMAIN-SUFFIX,madou8.pw,DIRECT
 DOMAIN-SUFFIX,rou666.net,DIRECT
-
-# 封面海报图床 CDN
-DOMAIN-SUFFIX,7132p.cc,DIRECT
 
 # 视频切片分发 CDN 节点集群
 DOMAIN-SUFFIX,vcwaloom.sbs,DIRECT
 DOMAIN-SUFFIX,vcbrhtly.sbs,DIRECT
 
 # 关键词兜底
-DOMAIN-KEYWORD,madou8,DIRECT
 DOMAIN-KEYWORD,rou666,DIRECT
 DOMAIN-KEYWORD,vcwaloom,DIRECT
 DOMAIN-KEYWORD,vcbrhtly,DIRECT
-
-
-
 
 # > 花街影院 多源图床 (直连由 Surge MITM 拦截解密)
 DOMAIN-SUFFIX,bcebos.com,DIRECT
@@ -270,20 +242,15 @@ DOMAIN-SUFFIX,vfile.meituan.net,DIRECT
 DOMAIN-SUFFIX,ahjxjy.cn,DIRECT
 DOMAIN-SUFFIX,zhuyitai.com,DIRECT
 DOMAIN-SUFFIX,unipus.cn,DIRECT
+
 # ------花街影院------#
 # 导航与动态发布页
 DOMAIN-SUFFIX,a6.yachts,DIRECT
 DOMAIN-SUFFIX,jx2huajy55.a6.yachts,PROXY
 
-# 封面海报图床 CDN
-DOMAIN-SUFFIX,bcebos.com,DIRECT
-DOMAIN-SUFFIX,unipus.cn,DIRECT
-
-# 核心主站、API 与流媒体直链
-DOMAIN-SUFFIX,cloudfront.net,DIRECT
-
 # 关键词兜底
 DOMAIN-KEYWORD,huajy,DIRECT
+
 # ------xn69------#
 # 导航与动态发布页
 DOMAIN-SUFFIX,xn--69-6tia3cb.net,DIRECT
@@ -298,6 +265,7 @@ DOMAIN-SUFFIX,gdcdnfkcf88.com,DIRECT
 # 关键词兜底
 DOMAIN-KEYWORD,lumierecore,DIRECT
 DOMAIN-KEYWORD,zyntravo,DIRECT
+
 # ------美人姬------#
 # 导航与动态发布页
 DOMAIN-SUFFIX,mmnnxx.shop,DIRECT
@@ -305,10 +273,7 @@ DOMAIN-SUFFIX,mmnnxx.shop,DIRECT
 # 封面海报图床 CDN
 DOMAIN-SUFFIX,xbpi2608.top,DIRECT
 
-# 核心主站、API 与流媒体切片 CDN
-DOMAIN-SUFFIX,xbv2608.com,DIRECT
 # 广告切片域名
-DOMAIN-SUFFIX,mmnnxx.shop,DIRECT
 DOMAIN-SUFFIX,xbv2026.com,DIRECT
 DOMAIN-SUFFIX,sex8sex855.com,DIRECT
 
@@ -316,6 +281,7 @@ DOMAIN-SUFFIX,sex8sex855.com,DIRECT
 DOMAIN-KEYWORD,mmnnxx,DIRECT
 DOMAIN-KEYWORD,xbpi2608,DIRECT
 DOMAIN-KEYWORD,xbv2608,DIRECT
+
 # ------海角情------#
 # 导航与动态发布页
 DOMAIN-SUFFIX,haijiaolove.xyz,PROXY
@@ -349,6 +315,7 @@ DOMAIN-SUFFIX,tktjpm.cn,PROXY
 DOMAIN-KEYWORD,daqbqrri,PROXY
 DOMAIN-KEYWORD,wirqed,PROXY
 DOMAIN-KEYWORD,tktjpm,PROXY
+
 # > BadNews 爬虫与流媒体播放分流规则集
 # 主站及脚本
 DOMAIN-SUFFIX,bad.news,PROXY
@@ -358,7 +325,6 @@ DOMAIN,pbs.twimg.com,PROXY
 DOMAIN-SUFFIX,hersav.me,PROXY
 # 核心视频流分发
 DOMAIN,video.twimg.com,PROXY
-
 
 # ==================== 4. 强制代理分流规则 (PROXY) ====================
 DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
