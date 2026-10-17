@@ -149,6 +149,9 @@ DOMAIN-SUFFIX,lsbbf10.com,DIRECT
 DOMAIN-SUFFIX,lsbbf11.com,DIRECT
 DOMAIN-KEYWORD,lsbbf,DIRECT
 DOMAIN-SUFFIX,lsbbf8.com,DIRECT
+DOMAIN-KEYWORD,modujx,DIRECT 
+DOMAIN-KEYWORD,lsbbf,DIRECT 
+DOMAIN-KEYWORD,fengbao,DIRECT
 
 # --- MissAV 核心流媒体与主站代理部分 ---
 # 视频流与切片服务器
@@ -344,4 +347,4 @@ DOMAIN-SUFFIX,91porna.com.com,PROXY
 花街海报解密 = type=http-response,pattern=^https?:\/\/(.*\.bcebos\.com|vfile\.meituan\.net|file\.zhuyitai\.com|oss\.zhuyitai\.com|ucloudqn\.unipus\.cn|huaweicloudobs\.ahjxjy\.cn)\/.*\.txt,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=js/huajie_decrypt.js
 
 [MITM]
-hostname = %APPEND% 2608.xbv2608.com, *.xbv2608.com, 2607.xbv2026.com, *.xbv2026.com, picc.sex8sex855.com, *.sex8sex855.com, *.ckzy3.com, ckzy3.com, *.cdn-xj.cc, cdn-xj.cc, *.dadi2026.com, *.fhv2026.com, *.senlin2026.com, *.xbv2608.com, *.cdn202608.com, cdn202608.com, *.sryndbsfvd.com, sryndbsfvd.com, *.iuewgnbvk.com, iuewgnbvk.com, *.v155p.com, v155p.com, *.jpxm3u8.com, jpxm3u8.com, *.vostrely.com, vostrely.com, *.bfaskcdn.com, bfaskcdn.com, *.fqm3u8.cc, fqm3u8.cc, *.txcy-emo.buzz, txcy-emo.buzz, *.thm3u8.vip, thm3u8.vip, *.thm3u8.co, thm3u8.co, *.hwzcfz.com, hwzcfz.com, *.bcebos.com, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn, pic.wirqed.cn, *.wirqed.cn, wirqed.cn, 2609.lbsl2026.com, *.lbsl2026.com, *.modujx11.com, *.modujx15.com, *.lz15uu.com, lz15uu.com, *.fengbao13.com, fengbao13.com, *.rrcdnbf5.com, rrcdnbf5.com, *.bfkjnwevjvnxx.com, bfkjnwevjvnxx.com, *.voddadaizi6.com, voddadaizi6.com, *.voddadaizi6.com:52866, voddadaizi6.com:52866, *.ckbhm3u8.com, ckbhm3u8.com, *.aim3u8.vip, aim3u8.vip, lsbbf8.com, *.lsbbf10.com, lsbbf10.com, *.lsbbf11.com, lsbbf11.com, *.lsbbf1.com, lsbbf1.com, *.lsbbf2.com, lsbbf2.com, *.lsbbf3.com, lsbbf3.com, *.lsbbf4.com, lsbbf4.com, *.lsbbf5.com, lsbbf5.com, *.lsbbf6.com, lsbbf6.com, *.lsbbf7.com, lsbbf7.com, *.lsbbf8.com, lsbbf8.com, *.lsbbf9.com, lsbbf9.com, *.lsbbf10.com, lsbbf10.com, *.lsbbf11.com, lsbbf11.com, *.lsbbf12.com, lsbbf12.com, *.lsbbf13.com, lsbbf13.com, *.lsbbf15.com, lsbbf15.com 
+hostname = %APPEND% *xbv2608*.com, *xbv2026*.com, *sex8sex855*.com, *ckzy3*.com, *cdn-xj*.cc, *dadi2026*.com, *fhv2026*.com, *senlin2026*.com, *cdn202608*.com, *sryndbsfvd*.com, *iuewgnbvk*.com, *v155p*.com, *jpxm3u8*.com, *vostrely*.com, *bfaskcdn*.com, *fqm3u8*.cc, *txcy-emo*.buzz, *thm3u8*.vip, *thm3u8*.co, *hwzcfz*.com, *bcebos*.com, *wirqed*.cn, *lbsl2026*.com, *lz15uu*.com, *rrcdnbf*.com, *bfkjnwevjvnxx*.com, *voddadaizi*.com, *voddadaizi*.com:52866, *ckbhm3u8*.com, *aim3u8*.vip, *modujx*.com, *lsbbf*.com, *fengbao*.com, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn 
