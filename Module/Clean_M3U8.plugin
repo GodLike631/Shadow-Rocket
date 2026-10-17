@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,ckzy3.com,DIRECT
 DOMAIN-SUFFIX,ckzyc.vip,DIRECT
 DOMAIN-SUFFIX,ptt01.com,DIRECT
 DOMAIN-KEYWORD,ptt01,DIRECT
-> 小淫虫-Tube 爬虫全链路分流规则
+# ---小淫虫-Tube 爬虫全链路分流规则 ---
 #主站及接口
 DOMAIN-SUFFIX,xyc01.eu.cc,PROXY
 #海报与静态资源 CDN
