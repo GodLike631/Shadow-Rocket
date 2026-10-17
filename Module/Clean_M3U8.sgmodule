@@ -22,11 +22,11 @@ DOMAIN-SUFFIX,lprk.cc,DIRECT
 DOMAIN-SUFFIX,mtzy2.com,DIRECT
 DOMAIN-SUFFIX,biglist03.xyz,DIRECT
 > 小淫虫-Tube 爬虫全链路分流规则
-主站及接口
+#主站及接口
 DOMAIN-SUFFIX,xyc01.eu.cc,PROXY
-海报与静态资源 CDN
+#海报与静态资源 CDN
 DOMAIN-SUFFIX,xbpic261012.top,PROXY DOMAIN-SUFFIX,uyjthen.com,PROXY
-流媒体 M3U8 视频切片分发 CDN
+#流媒体 M3U8 视频切片分发 CDN
 DOMAIN-SUFFIX,xbv2608.com,DIRECT 
 DOMAIN-SUFFIX,didibo2.com,DIRECT 
 DOMAIN-SUFFIX,hwzcfz.com,DIRECT 
