@@ -21,7 +21,7 @@ DOMAIN-SUFFIX,wuyeys.com,DIRECT
 DOMAIN-SUFFIX,lprk.cc,DIRECT
 DOMAIN-SUFFIX,mtzy2.com,DIRECT
 DOMAIN-SUFFIX,biglist03.xyz,DIRECT
-> 小淫虫-Tube 爬虫全链路分流规则
+# ---小淫虫-Tube 爬虫全链路分流规则 ---
 #主站及接口
 DOMAIN-SUFFIX,xyc01.eu.cc,PROXY
 #海报与静态资源 CDN
