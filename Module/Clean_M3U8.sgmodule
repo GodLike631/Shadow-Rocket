@@ -21,6 +21,18 @@ DOMAIN-SUFFIX,wuyeys.com,DIRECT
 DOMAIN-SUFFIX,lprk.cc,DIRECT
 DOMAIN-SUFFIX,mtzy2.com,DIRECT
 DOMAIN-SUFFIX,biglist03.xyz,DIRECT
+> 小淫虫-Tube 爬虫全链路分流规则
+主站及接口
+DOMAIN-SUFFIX,xyc01.eu.cc,PROXY
+海报与静态资源 CDN
+DOMAIN-SUFFIX,xbpic261012.top,PROXY DOMAIN-SUFFIX,uyjthen.com,PROXY
+流媒体 M3U8 视频切片分发 CDN
+DOMAIN-SUFFIX,xbv2608.com,DIRECT 
+DOMAIN-SUFFIX,didibo2.com,DIRECT 
+DOMAIN-SUFFIX,hwzcfz.com,DIRECT 
+DOMAIN-KEYWORD,didibo,DIRECT 
+DOMAIN-KEYWORD,xbv2608,DIRECT 
+DOMAIN-KEYWORD,hwzcfz,DIRECT
 
 # --- 2026 / 2608 / cdn202608 / sryndbsfvd 系列源 ---
 DOMAIN-SUFFIX,senlin2026.com,DIRECT
@@ -341,10 +353,11 @@ DOMAIN-SUFFIX,xiangjiao01.com,PROXY
 DOMAIN-SUFFIX,91porna.com.com,PROXY
 
 [Script]
-通用M3U8广告清洗 = type=http-response,pattern=(?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|sex8sex855\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|fqm3u8\.cc|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co)|hwzcfz\.com|modujx(?:11|15)\.com|lz15uu\.com|fengbao\d+\.com|rrcdnbf\d*\.com|bfkjnwevjvnxx\.com|voddadaizi\d*\.com|ckbhm3u8\.com|aim3u8\.vip|lsbbf\d*\.com).*?\.m3u8,script-path=https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js,requires-body=true,max-size=3145728,timeout=30
+通用M3U8广告清洗 = type=http-response,pattern=(?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|sex8sex855\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|fqm3u8\.cc|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co)|hwzcfz\.com|modujx\d*\.com|lz15uu\.com|fengbao\d*\.com|rrcdnbf\d*\.com|bfkjnwevjvnxx\.com|voddadaizi\d*\.com|ckbhm3u8\.com|aim3u8\.vip|lsbbf\d*\.com|didibo\d*\.com).*?\.m3u8,script-path=https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js,requires-body=true,max-size=3145728,timeout=30
 
 
 花街海报解密 = type=http-response,pattern=^https?:\/\/(.*\.bcebos\.com|vfile\.meituan\.net|file\.zhuyitai\.com|oss\.zhuyitai\.com|ucloudqn\.unipus\.cn|huaweicloudobs\.ahjxjy\.cn)\/.*\.txt,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=js/huajie_decrypt.js
 
 [MITM]
-hostname = %APPEND% *xbv2608*.com, *xbv2026*.com, *sex8sex855*.com, *ckzy3*.com, *cdn-xj*.cc, *dadi2026*.com, *fhv2026*.com, *senlin2026*.com, *cdn202608*.com, *sryndbsfvd*.com, *iuewgnbvk*.com, *v155p*.com, *jpxm3u8*.com, *vostrely*.com, *bfaskcdn*.com, *fqm3u8*.cc, *txcy-emo*.buzz, *thm3u8*.vip, *thm3u8*.co, *hwzcfz*.com, *bcebos*.com, *wirqed*.cn, *lbsl2026*.com, *lz15uu*.com, *rrcdnbf*.com, *bfkjnwevjvnxx*.com, *voddadaizi*.com, *voddadaizi*.com:52866, *ckbhm3u8*.com, *aim3u8*.vip, *modujx*.com, *lsbbf*.com, *fengbao*.com, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn 
+[MITM]
+hostname = %APPEND% *xbv2608*.com, *xbv2026*.com, *sex8sex855*.com, *ckzy3*.com, *cdn-xj*.cc, *dadi2026*.com, *fhv2026*.com, *senlin2026*.com, *cdn202608*.com, *sryndbsfvd*.com, *iuewgnbvk*.com, *v155p*.com, *jpxm3u8*.com, *vostrely*.com, *bfaskcdn*.com, *fqm3u8*.cc, *txcy-emo*.buzz, *thm3u8*.vip, *thm3u8*.co, *hwzcfz*.com, *bcebos*.com, *wirqed*.cn, *lbsl2026*.com, *lz15uu*.com, *rrcdnbf*.com, *bfkjnwevjvnxx*.com, *voddadaizi*.com, *voddadaizi*.com:52866, *ckbhm3u8*.com, *aim3u8*.vip, *modujx*.com, *lsbbf*.com, *fengbao*.com, *didibo*.com, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn
