@@ -6,6 +6,35 @@
 # 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧、番茄影视、美人姬、量子/暴风系、陌陌一夜情、CK百花资源、爱爱系列、麻花视频、滴滴播系列、暗夜蜜桃、久久网
 
 [Rule]
+# ------星空中文影院------#
+# 核心主站与 API 网关
+DOMAIN-SUFFIX,tiankongxkxk1.sbs,DIRECT
+
+# 封面海报图床 CDN
+DOMAIN-SUFFIX,ckbhjpg2.top,DIRECT
+
+# 视频流媒体解析、直链与切片分发 CDN
+DOMAIN-SUFFIX,aim3u8.vip,DIRECT
+DOMAIN-SUFFIX,aits1.vip,DIRECT
+DOMAIN-SUFFIX,ckbhm3u8.com,DIRECT
+DOMAIN-SUFFIX,ckts2.top,DIRECT
+DOMAIN-SUFFIX,dpew.erlgnf.com,DIRECT
+DOMAIN-SUFFIX,fqm3u8.cc,DIRECT
+DOMAIN-SUFFIX,hwzcfz.com,DIRECT
+DOMAIN-SUFFIX,lbv325627.com,DIRECT
+DOMAIN-SUFFIX,newljlj.com,DIRECT
+DOMAIN-SUFFIX,newljlj2025.com,DIRECT
+DOMAIN-SUFFIX,qrtuv.com,DIRECT
+DOMAIN-SUFFIX,senlin2026.com,DIRECT
+DOMAIN-SUFFIX,sex8sex866.com,DIRECT
+DOMAIN-SUFFIX,thm3u8.co,DIRECT
+DOMAIN-SUFFIX,tsbfzy.com,DIRECT
+DOMAIN-SUFFIX,xbv2608.com,DIRECT
+DOMAIN-SUFFIX,yzn6b.xyz,DIRECT
+DOMAIN-SUFFIX,ddcdnbf.com,DIRECT
+
+# 关键词兜底
+DOMAIN-KEYWORD,tiankongxk,DIRECT
 # ------快感研究所------#
 # 核心主站与 API 接口
 DOMAIN-SUFFIX,kuaigan47.top,DIRECT
@@ -574,4 +603,4 @@ DOMAIN-SUFFIX,91porna.com.com,PROXY
 通用M3U8广告清洗 = type=http-response,pattern=(?i)^https?:\/\/[^\/]*(ckzy3\.com|cdn-xj\.cc|[a-z0-9]+2026\.com|[a-z0-9]+2608\.com|sex8sex8\d*\.com|cdn202608\.com|sryndbsfvd\.com|iuewgnbvk\.com|[a-z0-9]+v155p\.com|v155p\.com|jpxm3u8\.com|vostrely\.com|bfaskcdn\.com|fqm3u8\.(cc|com)|txcy-emo\.buzz|th[a-z0-9]+\.(vip|top|co|org)|hwzcfz\.com|modujx\d*\.com|lz15uu\.com|fengbao\d*\.com|rrcdnbf\d*\.com|bfkjnwevjvnxx\.com|voddadaizi\d*\.com|ckbhm3u8\.com|aim3u8\.vip|aits\d*\.vip|ckts\d*\.top|lbv\d*\.com|newljlj(\d*|2025)?\.com|lsbbf\d*\.com|didibo\d*\.com|mitaoline\.com|lajiao\d*\.com|sysl\d*\.com|bbffsl2025\.com|cdn2020\.com|cklunlicaiji\.com|ddyunb20251018\.com|erlgnf\.com|hntvoss\.com|jipinvipplay\.com|jpts1\.top|lj20250710new\.com|ljljbf\.com|mysqldata3202s4l\.com|qugt\.com|qrtuv\.com|sl3split\.com|sysybf\.com|tsbfzy\.com|ddcdnbf\.com|yzn6b\.xyz|zsxsf\.com|baisiweiting\.com|bfikuncdn\.com|cdnlz\d*\.com|dytt-tv\.com|gsuus\.com|hhuus\.com|high\d*-playback\.com|huyall\.com|jisuzyv\.com|kuktxu\.com|lfthirtytwo\.com|ly166\.com|lz-cdn\d*\.com|lzcdn\d*\.com|lzv\d*\.com|maowushi\.com|maoyanplay\.top|oag7h\.com|power\d*play\.vip|ppqrrs\.com|rstu\d*\.com|ryiplay\d*\.com|ryplay\d*\.com|subokk\.com|ukubf\d*\.com|uvjtih\.cn|wgslsw\.com|xluuss\.com|yzzy\d*-play\.com|kuaigan\d*\.top|tiankongxkxk\d*\.sbs).*?m3u8,script-path=https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/Module/clean_m3u8.js,requires-body=true,max-size=3145728,timeout=30
 
 [MITM]
-hostname = %APPEND% *xbv2608*.com, *xbv2026*.com, *sex8sex855*.com, *tiankongxkxk*.sbs, *aits*.vip, *ckts*.top, *lbv*.com, *newljlj*.com, *sex8sex8*.com, *ckzy3*.com, *cdn-xj*.cc, *dadi2026*.com, *fhv2026*.com, *senlin2026*.com, *cdn202608*.com, *sryndbsfvd*.com, *iuewgnbvk*.com, *v155p*.com, *jpxm3u8*.com, *vostrely*.com, *bfaskcdn*.com, *fqm3u8*.cc, *fqm3u8*.com, *txcy-emo*.buzz, *thm3u8*.vip, *thm3u8*.co, *thm3u8*.org, *hwzcfz*.com, *bcebos*.com, *wirqed*.cn, *lbsl2026*.com, *lz15uu*.com, *rrcdnbf*.com, *bfkjnwevjvnxx*.com, *voddadaizi*.com, *voddadaizi*.com:52866, *ckbhm3u8*.com, *aim3u8*.vip, *modujx*.com, *lsbbf*.com, *fengbao*.com, *didibo*.com, *mitaoline*.com, *lajiao*.com, *sysl*.com, *bbffsl2025*.com, *cdn2020*.com, *cklunlicaiji*.com, *ddyunb20251018*.com, *erlgnf*.com, *hntvoss*.com, *jipinvipplay*.com, *jpts1*.top, *lj20250710new*.com, *ljljbf*.com, *mysqldata3202s4l*.com, *newljlj2025*.com, *qugt*.com, *qrtuv*.com, *sl3split*.com, *sysybf*.com, *tsbfzy*.com, *yzn6b*.xyz, *zsxsf*.com, *baisiweiting*.com, *bfikuncdn*.com, *cdnlz*.com, *dytt-tv*.com, *gsuus*.com, *hhuus*.com, *high*-playback*.com, *huyall*.com, *jisuzyv*.com, *kuktxu*.com, *lfthirtytwo*.com, *ly166*.com, *lz-cdn*.com, *lzcdn*.com, *lzv*.com, *maowushi*.com, *maoyanplay*.top, *oag7h*.com, *power*play*.vip, *ppqrrs*.com, *rstu*.com, *ryiplay*.com, *ryplay*.com, *subokk*.com, *ukubf*.com, *uvjtih*.cn, *wgslsw*.com, *xluuss*.com, *yzzy*-play*.com, *kuaigan*.top, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn
+hostname = %APPEND% *xbv2608*.com, *xbv2026*.com, *sex8sex855*.com, *tiankongxkxk*.sbs, *aits*.vip, *ddcdnbf*.com, *ckts*.top, *lbv*.com, *newljlj*.com, *sex8sex8*.com, *ckzy3*.com, *cdn-xj*.cc, *dadi2026*.com, *fhv2026*.com, *senlin2026*.com, *cdn202608*.com, *sryndbsfvd*.com, *iuewgnbvk*.com, *v155p*.com, *jpxm3u8*.com, *vostrely*.com, *bfaskcdn*.com, *fqm3u8*.cc, *fqm3u8*.com, *txcy-emo*.buzz, *thm3u8*.vip, *thm3u8*.co, *thm3u8*.org, *hwzcfz*.com, *bcebos*.com, *wirqed*.cn, *lbsl2026*.com, *lz15uu*.com, *rrcdnbf*.com, *bfkjnwevjvnxx*.com, *voddadaizi*.com, *voddadaizi*.com:52866, *ckbhm3u8*.com, *aim3u8*.vip, *modujx*.com, *lsbbf*.com, *fengbao*.com, *didibo*.com, *mitaoline*.com, *lajiao*.com, *sysl*.com, *bbffsl2025*.com, *cdn2020*.com, *cklunlicaiji*.com, *ddyunb20251018*.com, *erlgnf*.com, *hntvoss*.com, *jipinvipplay*.com, *jpts1*.top, *lj20250710new*.com, *ljljbf*.com, *mysqldata3202s4l*.com, *newljlj2025*.com, *qugt*.com, *qrtuv*.com, *sl3split*.com, *sysybf*.com, *tsbfzy*.com, *yzn6b*.xyz, *zsxsf*.com, *baisiweiting*.com, *bfikuncdn*.com, *cdnlz*.com, *dytt-tv*.com, *gsuus*.com, *hhuus*.com, *high*-playback*.com, *huyall*.com, *jisuzyv*.com, *kuktxu*.com, *lfthirtytwo*.com, *ly166*.com, *lz-cdn*.com, *lzcdn*.com, *lzv*.com, *maowushi*.com, *maoyanplay*.top, *oag7h*.com, *power*play*.vip, *ppqrrs*.com, *rstu*.com, *ryiplay*.com, *ryplay*.com, *subokk*.com, *ukubf*.com, *uvjtih*.cn, *wgslsw*.com, *xluuss*.com, *yzzy*-play*.com, *kuaigan*.top, vfile.meituan.net, file.zhuyitai.com, oss.zhuyitai.com, ucloudqn.unipus.cn, huaweicloudobs.ahjxjy.cn
