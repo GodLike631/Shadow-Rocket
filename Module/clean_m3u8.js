@@ -1,5 +1,5 @@
 /**
- * 影视 M3U8 通用去广告脚本（切片颗粒度级清洗版）
+ * 影视 M3U8 通用去广告脚本（切片颗粒度清洗标准版）
  * 兼容: Surge / Loon / Quantumult X
  * Telegram群组：https://t.me/tvshare23
  */
@@ -15,8 +15,8 @@ if (typeof body === "string" && body.indexOf("#EXTM3U") !== -1) {
         const rawLines = body.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n");
         const outputLines = [];
 
-        // 精准广告特征词库（新增 DoMaUgPr、2075kb，含 nlfRR6gH、RCP0FQBQ 等全量特征）
-        const adKeywords = /(DoMaUgPr|2075kb|nlfRR6gH|RCP0FQBQ|7Lzh4PuW|V2C7MJhC|ymO7zGr9|Bjf6z0RU|jHKrrx6s|2078kb|a3a6eda11cbfa352|2f1563ca37e75212|2db1cf28fb771e0d|de820e92881bd4d1|6aa3d5aa8e8c1ac11479d82a|GB1mnQDZ|adjump|\/video\/adjump|1787319|178732000|84_9109598f|751808405d7|10152kb|9622kb|9641kb|10141kb|30EjJFTT|W7fqTmbJ|JKyp1S2D|5568049a638c79f9|ec5db3bbf268dd34|7e14ee319bf8017d|ac080df0b161b6fb|ea6bb8a311db9dd0|1f1d60431202f328|39803bb0fa0ec24b|787de3b9178c4058|0916de7dab851cd8|65e7a9371db1b651|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|\/mov\/AD\/|8jlf67z19|C7bAbClC|erlgnf\.com|^\/\d{8}\/[a-f0-9]{16}\/seg_)/i;
+        // 精准广告特征词库（新增 9gWW64MM，含 DoMaUgPr、2075kb、nlfRR6gH 等全量特征）
+        const adKeywords = /(9gWW64MM|DoMaUgPr|2075kb|nlfRR6gH|RCP0FQBQ|7Lzh4PuW|V2C7MJhC|ymO7zGr9|Bjf6z0RU|jHKrrx6s|2078kb|a3a6eda11cbfa352|2f1563ca37e75212|2db1cf28fb771e0d|de820e92881bd4d1|6aa3d5aa8e8c1ac11479d82a|GB1mnQDZ|adjump|\/video\/adjump|1787319|178732000|84_9109598f|751808405d7|10152kb|9622kb|9641kb|10141kb|30EjJFTT|W7fqTmbJ|JKyp1S2D|5568049a638c79f9|ec5db3bbf268dd34|7e14ee319bf8017d|ac080df0b161b6fb|ea6bb8a311db9dd0|1f1d60431202f328|39803bb0fa0ec24b|787de3b9178c4058|0916de7dab851cd8|65e7a9371db1b651|Zse0Tpg8|seg_iif|9c08cdc|a6b9d4136946ad41|a0fd38|\/stream\/|\/mov\/AD\/|8jlf67z19|C7bAbClC|erlgnf\.com|^\/\d{8}\/[a-f0-9]{16}\/seg_)/i;
 
         let pendingExtinf = null;
         let pendingDiscontinuity = false;
