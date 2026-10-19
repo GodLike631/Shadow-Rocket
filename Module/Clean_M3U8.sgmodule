@@ -6,6 +6,26 @@
 # 目前已收录站点：大鸡吧、爆草留学生、塘心次元、采花大盗、蝴蝶影院、午夜影视、深夜影院、吉利猫、GDD视频、V155P视频、8K视界、桃花影视、Vostrely视频、麻豆短剧、番茄影视、美人姬、量子/暴风系、陌陌一夜情、CK百花资源、爱爱系列、麻花视频、滴滴播系列、暗夜蜜桃、久久网
 
 [Rule]
+# ------快感研究所------#
+# 核心主站与 API 接口
+DOMAIN-SUFFIX,kuaigan47.top,DIRECT
+
+# 视频流媒体解析、直链与切片分发 CDN
+DOMAIN-SUFFIX,2608.xbv2608.com,DIRECT
+DOMAIN-SUFFIX,2609.fhv2026.com,DIRECT
+DOMAIN-SUFFIX,2609.lajiao2026.com,DIRECT
+DOMAIN-SUFFIX,2609.lbsl2026.com,DIRECT
+DOMAIN-SUFFIX,2609.senlin2026.com,DIRECT
+DOMAIN-SUFFIX,2609.sysl2026.com,DIRECT
+DOMAIN-SUFFIX,2609.v155p.com,DIRECT
+DOMAIN-SUFFIX,fqm3u8.cc,DIRECT
+DOMAIN-SUFFIX,iuewgnbvk.com,DIRECT
+DOMAIN-SUFFIX,lsbbf11.com,DIRECT
+DOMAIN-SUFFIX,sryndbsfvd.com,DIRECT
+DOMAIN-SUFFIX,vostrely.com,DIRECT
+
+# 关键词兜底
+DOMAIN-KEYWORD,kuaigan,DIRECT
 # ------蝴蝶影院(PTT01)------#
 # 导航与动态发布页
 DOMAIN-SUFFIX,x99dh.cc,DIRECT
