@@ -9,6 +9,43 @@
 #!date = 2026-10-125 10:03
 
 [Rule]
+# ------少女印象------#
+# 主站与 API
+DOMAIN-SUFFIX,ssnnav.cyou,DIRECT
+
+# 静态资源与封面图床
+DOMAIN-SUFFIX,98765428.xyz,DIRECT
+DOMAIN-SUFFIX,xbp261018.top,DIRECT
+DOMAIN-SUFFIX,xbpic261012.top,DIRECT
+DOMAIN-SUFFIX,xbpi2608.top,DIRECT
+
+# 媒体流分发、Key 鉴权与切片 CDN
+DOMAIN-SUFFIX,sex8sex811.com,DIRECT
+DOMAIN-SUFFIX,sex8sex833.com,DIRECT
+DOMAIN-SUFFIX,sex8sex855.com,DIRECT
+DOMAIN-SUFFIX,sex8sex866.com,DIRECT
+DOMAIN-SUFFIX,sex8sex8sex8.com,DIRECT
+DOMAIN-SUFFIX,xbv2026.com,DIRECT
+DOMAIN-SUFFIX,xbv2608.com,DIRECT
+
+# 兜底匹配
+DOMAIN-KEYWORD,sex8sex8,DIRECT
+DOMAIN-KEYWORD,ssnnav,DIRECT
+# > Javtiful 节点与流媒体分流
+DOMAIN-SUFFIX,javtiful.com,PROXY
+DOMAIN-SUFFIX,avtik.com,PROXY
+DOMAIN-SUFFIX,jav.si,PROXY
+DOMAIN-KEYWORD,fast-stream,PROXY
+
+# ------蘑菇视频------#
+# 核心主站与爬虫 API
+DOMAIN-SUFFIX,moguds.cc,PROXY
+
+# 封面海报、M3U8 直链与 Key 鉴权 CDN
+DOMAIN-SUFFIX,d2qyuoh1tjbp7d.cloudfront.net,PROXY
+
+# TS 视频切片分发 CDN
+DOMAIN-SUFFIX,d2ln4qgmi83wfi.cloudfront.net,PROXY
 # ------星空中文影院------#
 # 核心主站与 API 网关
 DOMAIN-SUFFIX,tiankongxkxk1.sbs,DIRECT
@@ -34,7 +71,6 @@ DOMAIN-SUFFIX,thm3u8.co,DIRECT
 DOMAIN-SUFFIX,tsbfzy.com,DIRECT
 DOMAIN-SUFFIX,xbv2608.com,DIRECT
 DOMAIN-SUFFIX,yzn6b.xyz,DIRECT
-DOMAIN-SUFFIX,ddcdnbf.com,DIRECT
 
 # 关键词兜底
 DOMAIN-KEYWORD,tiankongxk,DIRECT
@@ -58,16 +94,19 @@ DOMAIN-SUFFIX,vostrely.com,DIRECT
 
 # 关键词兜底
 DOMAIN-KEYWORD,kuaigan,DIRECT
+
 # ------蝴蝶影院(PTT01)------#
 # 导航与动态发布页
-DOMAIN-SUFFIX,x99dh.cc,DIRECT
-DOMAIN-SUFFIX,x99dh.net,DIRECT
-DOMAIN-SUFFIX,x99dh.one,DIRECT
-DOMAIN-SUFFIX,x99dh.vip,DIRECT
+DOMAIN-SUFFIX,x99dh.cc,PROXY
+DOMAIN-SUFFIX,x99dh.net,PROXY
+DOMAIN-SUFFIX,x99dh.one,PROXY
+DOMAIN-SUFFIX,x99dh.vip,PROXY
 
 # 核心主站、API 与备用候选域
 DOMAIN-SUFFIX,ptt.co,DIRECT
 DOMAIN-SUFFIX,ptt01.com,DIRECT
+DOMAIN-SUFFIX,ptt03.com,DIRECT
+
 
 # 封面海报图床 CDN
 DOMAIN-SUFFIX,7132p.cc,DIRECT
@@ -203,25 +242,72 @@ DOMAIN-SUFFIX,zsxsf.com,DIRECT
 # 关键词兜底
 DOMAIN-KEYWORD,jiujiu,PROXY
 
+# ------TVB云播------#
+# 海外与需代理源站 / TMDB 图床
+DOMAIN-SUFFIX,tmdb.org,PROXY
+IP-CIDR,104.233.148.69/32,PROXY,no-resolve
+DOMAIN-SUFFIX,s3-tximg.top,PROXY
+
+# 主站与解析接口
+DOMAIN-SUFFIX,viptvb07.com,DIRECT
+DOMAIN-SUFFIX,hktvyb.top,DIRECT
+
+# 视频切片 CDN 播放流
+DOMAIN-SUFFIX,yzzy31-play.com,DIRECT
+
+# 国内主流平台海报与图床 CDN
+DOMAIN-SUFFIX,hitv.com,DIRECT
+DOMAIN-SUFFIX,puui.qpic.cn,DIRECT
+DOMAIN-SUFFIX,hdslb.com,DIRECT
+DOMAIN-SUFFIX,ykimg.com,DIRECT
+DOMAIN-SUFFIX,iqiyipic.com,DIRECT
+DOMAIN-SUFFIX,doubanio.com,DIRECT
+DOMAIN-SUFFIX,xmcdn.com,DIRECT
+DOMAIN-SUFFIX,360.cn,DIRECT
+
+# 第三方影视资源站图床 CDN
+DOMAIN-SUFFIX,ffzy888.com,DIRECT
+DOMAIN-SUFFIX,liangzipic.com,DIRECT
+DOMAIN-SUFFIX,lzipic.com,DIRECT
+DOMAIN-SUFFIX,picbf.com,DIRECT
+DOMAIN-SUFFIX,bfvp26.com,DIRECT
+DOMAIN-SUFFIX,yzzyimg.online,DIRECT
+DOMAIN-SUFFIX,67c6c7a.com,DIRECT
+DOMAIN-SUFFIX,imgzy360.com,DIRECT
+DOMAIN-SUFFIX,findjs.top,DIRECT
+DOMAIN-SUFFIX,qwapp.top,DIRECT
+DOMAIN-SUFFIX,wsyzy.org,DIRECT
+DOMAIN-SUFFIX,juquanquanapp.com,DIRECT
+DOMAIN-SUFFIX,dytt-img.com,DIRECT
+DOMAIN-SUFFIX,ctecdn.com,DIRECT
+
+# 关键词兜底
+DOMAIN-KEYWORD,viptvb,DIRECT
+DOMAIN-KEYWORD,yzzy,DIRECT
+
 # == 1. 采集站切片去广告目标源 (DIRECT) ==
 # --- CKZY ---
 DOMAIN-SUFFIX,ckzy3.com,DIRECT
 DOMAIN-SUFFIX,ckzyc.vip,DIRECT
 DOMAIN-SUFFIX,ptt01.com,DIRECT
 DOMAIN-KEYWORD,ptt01,DIRECT
-# ---小淫虫-Tube 爬虫全链路分流规则 ---
-#主站及接口
+# > 小淫虫-Tube 爬虫全链路分流规则
+# 主站及接口
 DOMAIN-SUFFIX,xyc01.eu.cc,PROXY
-#海报与静态资源 CDN
-DOMAIN-SUFFIX,xbpic261012.top,PROXY 
+
+# 海报与静态资源 CDN
+DOMAIN-SUFFIX,xbpic261012.top,PROXY
 DOMAIN-SUFFIX,uyjthen.com,PROXY
-#流媒体 M3U8 视频切片分发 CDN
-DOMAIN-SUFFIX,xbv2608.com,DIRECT 
-DOMAIN-SUFFIX,didibo2.com,DIRECT 
-DOMAIN-SUFFIX,hwzcfz.com,DIRECT 
-DOMAIN-KEYWORD,didibo,DIRECT 
-DOMAIN-KEYWORD,xbv2608,DIRECT 
+
+# 流媒体 M3U8 视频切片分发 CDN
+DOMAIN-SUFFIX,xbv2608.com,DIRECT
+DOMAIN-SUFFIX,didibo2.com,DIRECT
+DOMAIN-SUFFIX,hwzcfz.com,DIRECT
+DOMAIN-KEYWORD,didibo,DIRECT
+DOMAIN-KEYWORD,xbv2608,DIRECT
 DOMAIN-KEYWORD,hwzcfz,DIRECT
+
+
 # --- 午夜影视 ---
 DOMAIN-SUFFIX,cdn-xj.cc,DIRECT
 DOMAIN-SUFFIX,cdn-99.cc,DIRECT
@@ -357,61 +443,43 @@ DOMAIN-SUFFIX,aits1.vip,DIRECT
 DOMAIN-SUFFIX,lsbbf10.com,DIRECT
 DOMAIN-SUFFIX,lsbbf11.com,DIRECT
 DOMAIN-KEYWORD,lsbbf,DIRECT
-DOMAIN-SUFFIX,lsbbf8.com,DIRECT  
-DOMAIN-KEYWORD,modujx,DIRECT 
-DOMAIN-KEYWORD,lsbbf,DIRECT 
-DOMAIN-KEYWORD,fengbao,DIRECT
+DOMAIN-SUFFIX,lsbbf8.com,DIRECT
 DOMAIN-KEYWORD,mitaoline,DIRECT
 DOMAIN-SUFFIX,mitaoline.com,DIRECT
 DOMAIN-KEYWORD,tsbfask,DIRECT
 DOMAIN-SUFFIX,tsbfask.com,DIRECT
-DOMAIN-KEYWORD,lajiao,DIRECT
-DOMAIN-SUFFIX,lajiao2026.com,DIRECT
-DOMAIN-KEYWORD,sysl,DIRECT
-DOMAIN-SUFFIX,sysl2026.com,DIRECT
+DOMAIN-SUFFIX,huosucdn.com,DIRECT
 
-# ------TVB云播------#
-# 海外与需代理源站 / TMDB 图床
-DOMAIN-SUFFIX,tmdb.org,PROXY
-IP-CIDR,104.233.148.69/32,PROXY,no-resolve
-DOMAIN-SUFFIX,s3-tximg.top,PROXY
+# 自动覆盖 modujx1~99、lsbbf1~99、fengbao1~99 的所有派生与切片
+DOMAIN-KEYWORD,modujx,DIRECT
+DOMAIN-KEYWORD,lsbbf,DIRECT
+DOMAIN-KEYWORD,fengbao,DIRECT
 
-# 主站与解析接口
-DOMAIN-SUFFIX,viptvb07.com,DIRECT
-DOMAIN-SUFFIX,hktvyb.top,DIRECT
 
-# 视频切片 CDN 播放流
-DOMAIN-SUFFIX,yzzy31-play.com,DIRECT
 
-# 国内主流平台海报与图床 CDN
-DOMAIN-SUFFIX,hitv.com,DIRECT
-DOMAIN-SUFFIX,puui.qpic.cn,DIRECT
-DOMAIN-SUFFIX,hdslb.com,DIRECT
-DOMAIN-SUFFIX,ykimg.com,DIRECT
-DOMAIN-SUFFIX,iqiyipic.com,DIRECT
-DOMAIN-SUFFIX,doubanio.com,DIRECT
-DOMAIN-SUFFIX,xmcdn.com,DIRECT
-DOMAIN-SUFFIX,360.cn,DIRECT
 
-# 第三方影视资源站图床 CDN
-DOMAIN-SUFFIX,ffzy888.com,DIRECT
-DOMAIN-SUFFIX,liangzipic.com,DIRECT
-DOMAIN-SUFFIX,lzipic.com,DIRECT
-DOMAIN-SUFFIX,picbf.com,DIRECT
-DOMAIN-SUFFIX,bfvp26.com,DIRECT
-DOMAIN-SUFFIX,yzzyimg.online,DIRECT
-DOMAIN-SUFFIX,67c6c7a.com,DIRECT
-DOMAIN-SUFFIX,imgzy360.com,DIRECT
-DOMAIN-SUFFIX,findjs.top,DIRECT
-DOMAIN-SUFFIX,qwapp.top,DIRECT
-DOMAIN-SUFFIX,wsyzy.org,DIRECT
-DOMAIN-SUFFIX,juquanquanapp.com,DIRECT
-DOMAIN-SUFFIX,dytt-img.com,DIRECT
-DOMAIN-SUFFIX,ctecdn.com,DIRECT
 
-# 关键词兜底
-DOMAIN-KEYWORD,viptvb,DIRECT
-DOMAIN-KEYWORD,yzzy,DIRECT
+# > 麻花影视 (Mahuax) 全链路直连分流规则集
+# 主站及备用 API 域名
+DOMAIN-SUFFIX,mahuax.cyou,DIRECT
+DOMAIN-SUFFIX,mahuax.com,DIRECT
+
+# 核心 M3U8 视频流及切片 CDN 域名
+DOMAIN-SUFFIX,lsbbf2.com,DIRECT
+DOMAIN-SUFFIX,lsbbf5.com,DIRECT
+DOMAIN-SUFFIX,lsbbf9.com,DIRECT
+DOMAIN-SUFFIX,lsbbf10.com,DIRECT
+
+# 图片与封面静态对象存储 CDN
+DOMAIN-SUFFIX,sbzytpimg5.com,DIRECT
+DOMAIN-SUFFIX,sbzytpimg7.com,DIRECT
+DOMAIN-SUFFIX,sbzytpimg10.com,DIRECT
+
+# 平台必要基础静态资源与公共 CDN
+DOMAIN-SUFFIX,98765428.xyz,DIRECT
+DOMAIN-SUFFIX,cloudflareinsights.com,DIRECT
+
+
 # --- MissAV 核心流媒体与主站代理部分 ---
 # 视频流与切片服务器
 DOMAIN-SUFFIX,surrit.com,PROXY
@@ -597,7 +665,7 @@ DOMAIN,video.twimg.com,PROXY
 # ==================== 4. 强制代理分流规则 (PROXY) ====================
 DOMAIN-SUFFIX,xiangjiaoai.ai,PROXY
 DOMAIN-SUFFIX,xiangjiao01.com,PROXY
-DOMAIN-SUFFIX,91porna.com.com,PROXY
+DOMAIN-SUFFIX,91porna.com,PROXY
 
 [Script]
 #通用M3U8广告清洗
