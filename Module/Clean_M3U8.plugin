@@ -9,6 +9,25 @@
 #!date = 2026-10-28 23:28
 
 [Rule]
+# ------萝莉社------#
+# 核心主站与爬虫通信
+DOMAIN-SUFFIX,app-1.xx16x.shop,DIRECT
+
+# 封面海报图床 CDN
+DOMAIN-SUFFIX,sl2608p.top,DIRECT
+DOMAIN-SUFFIX,sl260908.top,DIRECT
+DOMAIN-SUFFIX,slp261019.top,DIRECT
+IP-CIDR,23.224.215.2/32,DIRECT,no-resolve
+
+# 流媒体直链、二级切片分发与 Key 鉴权 CDN
+DOMAIN-SUFFIX,bbffsl2025.com,DIRECT
+DOMAIN-SUFFIX,mysqldata3202s4l.com,DIRECT
+DOMAIN-SUFFIX,senlin2026.com,DIRECT
+DOMAIN-SUFFIX,sl3split.com,DIRECT
+DOMAIN-SUFFIX,slslbf.com,DIRECT
+DOMAIN-SUFFIX,slslvip12.com,DIRECT
+DOMAIN-SUFFIX,slslvip3.com,DIRECT
+DOMAIN-SUFFIX,slv525627.com,DIRECT
 # ------少女印象------#
 # 主站与 API
 DOMAIN-SUFFIX,ssnnav.cyou,DIRECT
