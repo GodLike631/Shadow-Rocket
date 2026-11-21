@@ -58,6 +58,15 @@ DOMAIN-SUFFIX,doppiocdn.org,PROXY
 DOMAIN-SUFFIX,doppiocdn.com,PROXY
 DOMAIN-SUFFIX,doppiocdn.net,PROXY
 DOMAIN-SUFFIX,growcdnssedge.com,PROXY
+
+# Stripchat 主站及子域（官网/API/图片直连）
+DOMAIN-SUFFIX,stripchat.com,PROXY
+
+# Stripchat models 接口上游
+DOMAIN-SUFFIX,go.mavrtracktor.com,PROXY
+
+# Stripchat 头像/预览图静态代理
+DOMAIN-SUFFIX,strpst.com,PROXY
 # > 黑料帝 (heiliaodi.com) 全链路直连分流规则
 # > 包含：主站通信、封面图片 CDN、播放数据路由
 
@@ -526,7 +535,7 @@ IP-CIDR,45.200.14.213/32,DIRECT,no-resolve
 DOMAIN-SUFFIX,hembed.com,DIRECT
 DOMAIN-SUFFIX,hanime1.me,DIRECT
 DOMAIN-SUFFIX,hstream.moe,DIRECT
-DOMAIN-KEYWORD,stripchat,DIRECT
+DOMAIN-KEYWORD,stripchat,PROXY
 DOMAIN-SUFFIX,wtayty.cn,DIRECT
 DOMAIN-SUFFIX,lz15uu.com,DIRECT
 DOMAIN-SUFFIX,fengbao13.com,DIRECT
