@@ -1,18 +1,20 @@
 # NAME: hudieyingshi_proxy
 # AUTHOR: @tvshare23
 # REPO: https://t.me/tvshare23
-# UPDATED: 2026-10-19 10:27:39
-# DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 455
-# IP-CIDR: 8
-# TOTAL: 463
+# UPDATED: 2026-11-21 15:03:01
+# DOMAIN-KEYWORD: 14
+# DOMAIN-SUFFIX: 69
+# IP-CIDR: 2
+# TOTAL: 89
 
 # --- IP-CIDR ---
+IP-CIDR,23.225.11.173/32,no-resolve
 IP-CIDR,104.233.148.69/32,no-resolve
 
 # --- DOMAIN ---
 DOMAIN,img.lvv2.com
 DOMAIN,pbs.twimg.com
+DOMAIN,strip.5568999.cc.cd
 DOMAIN,video.twimg.com
 
 # --- DOMAIN-KEYWORD ---
@@ -20,43 +22,84 @@ DOMAIN-KEYWORD,abyssplayer
 DOMAIN-KEYWORD,allclassic
 DOMAIN-KEYWORD,daqbqrri
 DOMAIN-KEYWORD,dood
+DOMAIN-KEYWORD,fast-stream
 DOMAIN-KEYWORD,freepornvideos
 DOMAIN-KEYWORD,haijiao
 DOMAIN-KEYWORD,jiujiu
 DOMAIN-KEYWORD,missav
+DOMAIN-KEYWORD,stripchat
 DOMAIN-KEYWORD,tktjpm
 DOMAIN-KEYWORD,vintagepornfun
 DOMAIN-KEYWORD,wirqed
+DOMAIN-KEYWORD,workarea
 
 # --- DOMAIN-SUFFIX ---
-DOMAIN-SUFFIX,91porna.com.com
+DOMAIN-SUFFIX,1024cg.com
+DOMAIN-SUFFIX,4k-av.com
+DOMAIN-SUFFIX,51cg1.com
+DOMAIN-SUFFIX,718yule.com
+DOMAIN-SUFFIX,91cg1.com
+DOMAIN-SUFFIX,91porn.com
+DOMAIN-SUFFIX,91porna.com
+DOMAIN-SUFFIX,97img.com
+DOMAIN-SUFFIX,98cdn.vip
 DOMAIN-SUFFIX,abyssplayer.com
+DOMAIN-SUFFIX,aiheiliao1.com
 DOMAIN-SUFFIX,allclassic.porn
+DOMAIN-SUFFIX,avgc9.store
+DOMAIN-SUFFIX,avtik.com
 DOMAIN-SUFFIX,bad.news
+DOMAIN-SUFFIX,blw66.com
+DOMAIN-SUFFIX,btc620.com
 DOMAIN-SUFFIX,bysewihe.com
+DOMAIN-SUFFIX,cctv05.com
+DOMAIN-SUFFIX,cdn2020.com
+DOMAIN-SUFFIX,cgw666.com
 DOMAIN-SUFFIX,cloudatacdn.com
 DOMAIN-SUFFIX,d000d.com
+DOMAIN-SUFFIX,d2ln4qgmi83wfi.cloudfront.net
+DOMAIN-SUFFIX,d2qyuoh1tjbp7d.cloudfront.net
 DOMAIN-SUFFIX,daqbqrri.cc
+DOMAIN-SUFFIX,doppiocdn.com
+DOMAIN-SUFFIX,doppiocdn.net
+DOMAIN-SUFFIX,doppiocdn.org
+DOMAIN-SUFFIX,dychigua.com
 DOMAIN-SUFFIX,eisees.com
 DOMAIN-SUFFIX,freepornvideos.xxx
+DOMAIN-SUFFIX,go.mavrtracktor.com
+DOMAIN-SUFFIX,growcdnssedge.com
 DOMAIN-SUFFIX,haijiaolove.xyz
+DOMAIN-SUFFIX,haijiaoluv.top
+DOMAIN-SUFFIX,heiliaodi.com
 DOMAIN-SUFFIX,hersav.me
+DOMAIN-SUFFIX,hs100.top
+DOMAIN-SUFFIX,jav.si
+DOMAIN-SUFFIX,javtiful.com
 DOMAIN-SUFFIX,jiujiu.live
+DOMAIN-SUFFIX,jp98.vip
 DOMAIN-SUFFIX,jx2huajy55.a6.yachts
+DOMAIN-SUFFIX,kanliao19.one
+DOMAIN-SUFFIX,moguds.cc
 DOMAIN-SUFFIX,piq.re
 DOMAIN-SUFFIX,playmogo.com
 DOMAIN-SUFFIX,postimg.cc
 DOMAIN-SUFFIX,s3-tximg.top
 DOMAIN-SUFFIX,sixyik.com
 DOMAIN-SUFFIX,sssrr.org
+DOMAIN-SUFFIX,stripchat.com
+DOMAIN-SUFFIX,strpst.com
 DOMAIN-SUFFIX,surrit.com
+DOMAIN-SUFFIX,t66y.com
 DOMAIN-SUFFIX,thisav.my
 DOMAIN-SUFFIX,tktjpm.cn
 DOMAIN-SUFFIX,tmdb.org
-DOMAIN-SUFFIX,uyjthen.com
 DOMAIN-SUFFIX,vintagepornfun.com
 DOMAIN-SUFFIX,wirqed.cn
-DOMAIN-SUFFIX,xbpic261012.top
+DOMAIN-SUFFIX,x99dh.cc
+DOMAIN-SUFFIX,x99dh.net
+DOMAIN-SUFFIX,x99dh.one
+DOMAIN-SUFFIX,x99dh.vip
+DOMAIN-SUFFIX,xhamster.com
 DOMAIN-SUFFIX,xiangjiao01.com
 DOMAIN-SUFFIX,xiangjiaoai.ai
 DOMAIN-SUFFIX,xyc01.eu.cc
