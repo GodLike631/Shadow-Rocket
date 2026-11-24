@@ -1,0 +1,50 @@
+# > AV
+# Pornhub
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,phncdn.com
+# XVideos
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,xvideos-cdn.com
+# Eporner
+DOMAIN-SUFFIX,eporner.com
+# Xnxx
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,xnxx-cdn.com
+# RedTube
+DOMAIN-SUFFIX,redtube.com
+DOMAIN-SUFFIX,rdtcdn.com
+# SuperPorn
+DOMAIN-SUFFIX,superporn.ws
+DOMAIN-SUFFIX,vcwinford.cc
+DOMAIN-SUFFIX,x99dh.net
+DOMAIN-SUFFIX,x99dh.lat
+# xHamster
+# （导航域名 x99dh.net / x99dh.lat 见 SuperPorn 组，已去重）
+DOMAIN-SUFFIX,xhamster01.net
+DOMAIN-SUFFIX,xhcdn.com
+# xHamster18
+# （图片/视频 CDN xhcdn.com 见 xHamster 组，已去重）
+DOMAIN-SUFFIX,xhamster.com
+# HQPorner
+DOMAIN-SUFFIX,hqporner.com
+DOMAIN-SUFFIX,mydaddy.cc
+# PornTube
+DOMAIN-SUFFIX,porntube.cool
+DOMAIN,v2.cdn199.com
+DOMAIN,v2.kekecdn.net
+DOMAIN,v2.luchu.org
+DOMAIN,v2.madou.ws
+DOMAIN,v2.papapa.biz
+DOMAIN,v2.xiaoshuo.info
+DOMAIN,v2.xiaoshuo.la
+# JAVHD
+DOMAIN-SUFFIX,javhd.com
+# VF四级老片
+DOMAIN-SUFFIX,vintagepornfun.com
+DOMAIN-SUFFIX,bysewihe.com
+# Twitter精选
+DOMAIN-SUFFIX,pektino.com
+DOMAIN,wsrv.nl
+DOMAIN,video.twimg.com
+# ZXC影视
+DOMAIN-SUFFIX,zxctube.com
