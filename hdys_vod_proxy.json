@@ -3,10 +3,10 @@
   "name": "hudieyingshi_proxy",
   "author": "@tvshare23",
   "repo": "https://t.me/tvshare23",
-  "updated": "2026-11-24 16:17:00",
-  "domain_suffix_count": 93,
+  "updated": "2026-11-24 19:57:00",
+  "domain_suffix_count": 94,
   "ip_cidr_count": 2,
-  "total": 125,
+  "total": 127,
   "rules": [
     {
       "ip_cidr": [
@@ -15,14 +15,14 @@
       "domain": [
         "1024chigua.yishengheqiu7679.workers.dev", "718haibao.peiqi192192.workers.dev",
         "chigua-img-proxy.yishengheqiu7679.workers.dev",
-        "hj-stream-proxy.yishengheqiu7679.workers.dev", "img.lvv2.com", "pbs.twimg.com",
+        "hj-stream-proxy.yishengheqiu7679.workers.dev",
+        "huangguo-parser.yishengheqiu7679.workers.dev", "img.lvv2.com", "pbs.twimg.com",
         "strip.5568999.cc.cd", "v2.cdn199.com", "v2.kekecdn.net", "v2.luchu.org", "v2.madou.ws",
         "v2.papapa.biz", "v2.xiaoshuo.info", "v2.xiaoshuo.la", "video.twimg.com", "wsrv.nl"
       ],
       "domain_keyword": [
         "abyssplayer", "allclassic", "daqbqrri", "dood", "fast-stream", "freepornvideos",
-        "haijiao", "jiujiu", "missav", "stripchat", "tktjpm", "vintagepornfun", "wirqed",
-        "workarea"
+        "haijiao", "jiujiu", "missav", "stripchat", "tktjpm", "vintagepornfun", "wirqed", "workarea"
       ],
       "domain_suffix": [
         "1024cg.com", "4k-av.com", "51cg1.com", "57cg4.com", "57duanju.org", "718yule.com",
@@ -35,13 +35,14 @@
         "growcdnssedge.com", "haijiaolove.xyz", "haijiaoluv.top", "heiliao.com", "heiliaodi.com",
         "hersav.me", "hl365.com", "hqporner.com", "hs100.top", "jav.si", "javhd.com",
         "javtiful.com", "jiujiu.live", "jp98.vip", "jx2huajy55.a6.yachts", "kanliao19.one",
-        "moguds.cc", "mydaddy.cc", "pektino.com", "phncdn.com", "piq.re", "playmogo.com",
-        "pornhub.com", "porntube.cool", "postimg.cc", "rdtcdn.com", "redtube.com", "s3-tximg.top",
-        "sixyik.com", "sssrr.org", "stripchat.com", "strpst.com", "superporn.ws", "surrit.com",
-        "t66y.com", "thisav.my", "tktjpm.cn", "tmdb.org", "vcwinford.cc", "vintagepornfun.com",
-        "wirqed.cn", "x99dh.cc", "x99dh.lat", "x99dh.net", "x99dh.one", "x99dh.vip",
-        "xhamster.com", "xhamster01.net", "xhcdn.com", "xiangjiao01.com", "xiangjiaoai.ai",
-        "xnxx-cdn.com", "xnxx.com", "xvideos-cdn.com", "xvideos.com", "xyc01.eu.cc", "zxctube.com"
+        "moguds.cc", "mydaddy.cc", "onejapanese.com", "pektino.com", "phncdn.com", "piq.re",
+        "playmogo.com", "pornhub.com", "porntube.cool", "postimg.cc", "rdtcdn.com", "redtube.com",
+        "s3-tximg.top", "sixyik.com", "sssrr.org", "stripchat.com", "strpst.com", "superporn.ws",
+        "surrit.com", "t66y.com", "thisav.my", "tktjpm.cn", "tmdb.org", "vcwinford.cc",
+        "vintagepornfun.com", "wirqed.cn", "x99dh.cc", "x99dh.lat", "x99dh.net", "x99dh.one",
+        "x99dh.vip", "xhamster.com", "xhamster01.net", "xhcdn.com", "xiangjiao01.com",
+        "xiangjiaoai.ai", "xnxx-cdn.com", "xnxx.com", "xvideos-cdn.com", "xvideos.com",
+        "xyc01.eu.cc", "zxctube.com"
       ]
     }
   ]

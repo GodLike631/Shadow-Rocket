@@ -1,11 +1,11 @@
 # NAME: hudieyingshi_proxy
 # AUTHOR: @tvshare23
 # REPO: https://t.me/tvshare23
-# UPDATED: 2026-11-24 16:17:00
+# UPDATED: 2026-11-24 19:57:00
 # DOMAIN-KEYWORD: 14
-# DOMAIN-SUFFIX: 93
+# DOMAIN-SUFFIX: 94
 # IP-CIDR: 2
-# TOTAL: 125
+# TOTAL: 127
 payload:
   # --- IP-CIDR ---
   - IP-CIDR,23.225.11.173/32,no-resolve
@@ -16,6 +16,7 @@ payload:
   - DOMAIN,718haibao.peiqi192192.workers.dev
   - DOMAIN,chigua-img-proxy.yishengheqiu7679.workers.dev
   - DOMAIN,hj-stream-proxy.yishengheqiu7679.workers.dev
+  - DOMAIN,huangguo-parser.yishengheqiu7679.workers.dev
   - DOMAIN,img.lvv2.com
   - DOMAIN,pbs.twimg.com
   - DOMAIN,strip.5568999.cc.cd
@@ -100,6 +101,7 @@ payload:
   - DOMAIN-SUFFIX,kanliao19.one
   - DOMAIN-SUFFIX,moguds.cc
   - DOMAIN-SUFFIX,mydaddy.cc
+  - DOMAIN-SUFFIX,onejapanese.com
   - DOMAIN-SUFFIX,pektino.com
   - DOMAIN-SUFFIX,phncdn.com
   - DOMAIN-SUFFIX,piq.re
