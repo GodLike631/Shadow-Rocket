@@ -1,21 +1,33 @@
 # NAME: hudieyingshi_proxy
 # AUTHOR: @tvshare23
 # REPO: https://t.me/tvshare23
-# UPDATED: 2026-11-21 15:03:01
+# UPDATED: 2026-11-24 16:17:00
 # DOMAIN-KEYWORD: 14
-# DOMAIN-SUFFIX: 69
+# DOMAIN-SUFFIX: 93
 # IP-CIDR: 2
-# TOTAL: 89
+# TOTAL: 125
 
 # --- IP-CIDR ---
 IP-CIDR,23.225.11.173/32,no-resolve
 IP-CIDR,104.233.148.69/32,no-resolve
 
 # --- DOMAIN ---
+DOMAIN,1024chigua.yishengheqiu7679.workers.dev
+DOMAIN,718haibao.peiqi192192.workers.dev
+DOMAIN,chigua-img-proxy.yishengheqiu7679.workers.dev
+DOMAIN,hj-stream-proxy.yishengheqiu7679.workers.dev
 DOMAIN,img.lvv2.com
 DOMAIN,pbs.twimg.com
 DOMAIN,strip.5568999.cc.cd
+DOMAIN,v2.cdn199.com
+DOMAIN,v2.kekecdn.net
+DOMAIN,v2.luchu.org
+DOMAIN,v2.madou.ws
+DOMAIN,v2.papapa.biz
+DOMAIN,v2.xiaoshuo.info
+DOMAIN,v2.xiaoshuo.la
 DOMAIN,video.twimg.com
+DOMAIN,wsrv.nl
 
 # --- DOMAIN-KEYWORD ---
 DOMAIN-KEYWORD,abyssplayer
@@ -37,6 +49,8 @@ DOMAIN-KEYWORD,workarea
 DOMAIN-SUFFIX,1024cg.com
 DOMAIN-SUFFIX,4k-av.com
 DOMAIN-SUFFIX,51cg1.com
+DOMAIN-SUFFIX,57cg4.com
+DOMAIN-SUFFIX,57duanju.org
 DOMAIN-SUFFIX,718yule.com
 DOMAIN-SUFFIX,91cg1.com
 DOMAIN-SUFFIX,91porn.com
@@ -65,41 +79,63 @@ DOMAIN-SUFFIX,doppiocdn.net
 DOMAIN-SUFFIX,doppiocdn.org
 DOMAIN-SUFFIX,dychigua.com
 DOMAIN-SUFFIX,eisees.com
+DOMAIN-SUFFIX,eporner.com
 DOMAIN-SUFFIX,freepornvideos.xxx
 DOMAIN-SUFFIX,go.mavrtracktor.com
 DOMAIN-SUFFIX,growcdnssedge.com
 DOMAIN-SUFFIX,haijiaolove.xyz
 DOMAIN-SUFFIX,haijiaoluv.top
+DOMAIN-SUFFIX,heiliao.com
 DOMAIN-SUFFIX,heiliaodi.com
 DOMAIN-SUFFIX,hersav.me
+DOMAIN-SUFFIX,hl365.com
+DOMAIN-SUFFIX,hqporner.com
 DOMAIN-SUFFIX,hs100.top
 DOMAIN-SUFFIX,jav.si
+DOMAIN-SUFFIX,javhd.com
 DOMAIN-SUFFIX,javtiful.com
 DOMAIN-SUFFIX,jiujiu.live
 DOMAIN-SUFFIX,jp98.vip
 DOMAIN-SUFFIX,jx2huajy55.a6.yachts
 DOMAIN-SUFFIX,kanliao19.one
 DOMAIN-SUFFIX,moguds.cc
+DOMAIN-SUFFIX,mydaddy.cc
+DOMAIN-SUFFIX,pektino.com
+DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,piq.re
 DOMAIN-SUFFIX,playmogo.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,porntube.cool
 DOMAIN-SUFFIX,postimg.cc
+DOMAIN-SUFFIX,rdtcdn.com
+DOMAIN-SUFFIX,redtube.com
 DOMAIN-SUFFIX,s3-tximg.top
 DOMAIN-SUFFIX,sixyik.com
 DOMAIN-SUFFIX,sssrr.org
 DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,strpst.com
+DOMAIN-SUFFIX,superporn.ws
 DOMAIN-SUFFIX,surrit.com
 DOMAIN-SUFFIX,t66y.com
 DOMAIN-SUFFIX,thisav.my
 DOMAIN-SUFFIX,tktjpm.cn
 DOMAIN-SUFFIX,tmdb.org
+DOMAIN-SUFFIX,vcwinford.cc
 DOMAIN-SUFFIX,vintagepornfun.com
 DOMAIN-SUFFIX,wirqed.cn
 DOMAIN-SUFFIX,x99dh.cc
+DOMAIN-SUFFIX,x99dh.lat
 DOMAIN-SUFFIX,x99dh.net
 DOMAIN-SUFFIX,x99dh.one
 DOMAIN-SUFFIX,x99dh.vip
 DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,xhamster01.net
+DOMAIN-SUFFIX,xhcdn.com
 DOMAIN-SUFFIX,xiangjiao01.com
 DOMAIN-SUFFIX,xiangjiaoai.ai
+DOMAIN-SUFFIX,xnxx-cdn.com
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,xvideos-cdn.com
+DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,xyc01.eu.cc
+DOMAIN-SUFFIX,zxctube.com

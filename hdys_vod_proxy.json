@@ -3,17 +3,21 @@
   "name": "hudieyingshi_proxy",
   "author": "@tvshare23",
   "repo": "https://t.me/tvshare23",
-  "updated": "2026-11-21 15:03:01",
-  "domain_suffix_count": 69,
+  "updated": "2026-11-24 16:17:00",
+  "domain_suffix_count": 93,
   "ip_cidr_count": 2,
-  "total": 89,
+  "total": 125,
   "rules": [
     {
       "ip_cidr": [
         "23.225.11.173/32", "104.233.148.69/32"
       ],
       "domain": [
-        "img.lvv2.com", "pbs.twimg.com", "strip.5568999.cc.cd", "video.twimg.com"
+        "1024chigua.yishengheqiu7679.workers.dev", "718haibao.peiqi192192.workers.dev",
+        "chigua-img-proxy.yishengheqiu7679.workers.dev",
+        "hj-stream-proxy.yishengheqiu7679.workers.dev", "img.lvv2.com", "pbs.twimg.com",
+        "strip.5568999.cc.cd", "v2.cdn199.com", "v2.kekecdn.net", "v2.luchu.org", "v2.madou.ws",
+        "v2.papapa.biz", "v2.xiaoshuo.info", "v2.xiaoshuo.la", "video.twimg.com", "wsrv.nl"
       ],
       "domain_keyword": [
         "abyssplayer", "allclassic", "daqbqrri", "dood", "fast-stream", "freepornvideos",
@@ -21,19 +25,23 @@
         "workarea"
       ],
       "domain_suffix": [
-        "1024cg.com", "4k-av.com", "51cg1.com", "718yule.com", "91cg1.com", "91porn.com",
-        "91porna.com", "97img.com", "98cdn.vip", "abyssplayer.com", "aiheiliao1.com",
-        "allclassic.porn", "avgc9.store", "avtik.com", "bad.news", "blw66.com", "btc620.com",
-        "bysewihe.com", "cctv05.com", "cdn2020.com", "cgw666.com", "cloudatacdn.com", "d000d.com",
-        "d2ln4qgmi83wfi.cloudfront.net", "d2qyuoh1tjbp7d.cloudfront.net", "daqbqrri.cc",
-        "doppiocdn.com", "doppiocdn.net", "doppiocdn.org", "dychigua.com", "eisees.com",
-        "freepornvideos.xxx", "go.mavrtracktor.com", "growcdnssedge.com", "haijiaolove.xyz",
-        "haijiaoluv.top", "heiliaodi.com", "hersav.me", "hs100.top", "jav.si", "javtiful.com",
-        "jiujiu.live", "jp98.vip", "jx2huajy55.a6.yachts", "kanliao19.one", "moguds.cc", "piq.re",
-        "playmogo.com", "postimg.cc", "s3-tximg.top", "sixyik.com", "sssrr.org", "stripchat.com",
-        "strpst.com", "surrit.com", "t66y.com", "thisav.my", "tktjpm.cn", "tmdb.org",
-        "vintagepornfun.com", "wirqed.cn", "x99dh.cc", "x99dh.net", "x99dh.one", "x99dh.vip",
-        "xhamster.com", "xiangjiao01.com", "xiangjiaoai.ai", "xyc01.eu.cc"
+        "1024cg.com", "4k-av.com", "51cg1.com", "57cg4.com", "57duanju.org", "718yule.com",
+        "91cg1.com", "91porn.com", "91porna.com", "97img.com", "98cdn.vip", "abyssplayer.com",
+        "aiheiliao1.com", "allclassic.porn", "avgc9.store", "avtik.com", "bad.news", "blw66.com",
+        "btc620.com", "bysewihe.com", "cctv05.com", "cdn2020.com", "cgw666.com", "cloudatacdn.com",
+        "d000d.com", "d2ln4qgmi83wfi.cloudfront.net", "d2qyuoh1tjbp7d.cloudfront.net",
+        "daqbqrri.cc", "doppiocdn.com", "doppiocdn.net", "doppiocdn.org", "dychigua.com",
+        "eisees.com", "eporner.com", "freepornvideos.xxx", "go.mavrtracktor.com",
+        "growcdnssedge.com", "haijiaolove.xyz", "haijiaoluv.top", "heiliao.com", "heiliaodi.com",
+        "hersav.me", "hl365.com", "hqporner.com", "hs100.top", "jav.si", "javhd.com",
+        "javtiful.com", "jiujiu.live", "jp98.vip", "jx2huajy55.a6.yachts", "kanliao19.one",
+        "moguds.cc", "mydaddy.cc", "pektino.com", "phncdn.com", "piq.re", "playmogo.com",
+        "pornhub.com", "porntube.cool", "postimg.cc", "rdtcdn.com", "redtube.com", "s3-tximg.top",
+        "sixyik.com", "sssrr.org", "stripchat.com", "strpst.com", "superporn.ws", "surrit.com",
+        "t66y.com", "thisav.my", "tktjpm.cn", "tmdb.org", "vcwinford.cc", "vintagepornfun.com",
+        "wirqed.cn", "x99dh.cc", "x99dh.lat", "x99dh.net", "x99dh.one", "x99dh.vip",
+        "xhamster.com", "xhamster01.net", "xhcdn.com", "xiangjiao01.com", "xiangjiaoai.ai",
+        "xnxx-cdn.com", "xnxx.com", "xvideos-cdn.com", "xvideos.com", "xyc01.eu.cc", "zxctube.com"
       ]
     }
   ]
