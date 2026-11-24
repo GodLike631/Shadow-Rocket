@@ -79,3 +79,8 @@ DOMAIN-SUFFIX,blw66.com
 DOMAIN-SUFFIX,kanliao19.one
 # 海角精选
 DOMAIN-SUFFIX,haijiaolove.xyz
+# 吃瓜 Worker 代理（workers.dev 共享后缀，精确匹配）
+DOMAIN,chigua-img-proxy.yishengheqiu7679.workers.dev
+DOMAIN,1024chigua.yishengheqiu7679.workers.dev
+DOMAIN,hj-stream-proxy.yishengheqiu7679.workers.dev
+DOMAIN,718haibao.peiqi192192.workers.dev
