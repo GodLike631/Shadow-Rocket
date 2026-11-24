@@ -48,3 +48,34 @@ DOMAIN,wsrv.nl
 DOMAIN,video.twimg.com
 # ZXC影视
 DOMAIN-SUFFIX,zxctube.com
+# 吃瓜
+# 吃瓜全家桶（聚合源 51cg1.com / 91cg1.com 见下，不另列）
+# 吃瓜网
+DOMAIN-SUFFIX,cgw666.com
+# 51吃瓜
+DOMAIN-SUFFIX,51cg1.com
+# 57吃瓜
+DOMAIN-SUFFIX,57duanju.org
+DOMAIN-SUFFIX,57cg4.com
+# 91吃瓜
+DOMAIN-SUFFIX,91cg1.com
+# 718吃瓜
+DOMAIN-SUFFIX,718yule.com
+# 1024吃瓜
+DOMAIN-SUFFIX,1024cg.com
+# 抖音吃瓜
+DOMAIN-SUFFIX,dychigua.com
+# 黑料不打烊
+DOMAIN-SUFFIX,hl365.com
+# 黑料网
+DOMAIN-SUFFIX,heiliao.com
+# 黑料帝
+DOMAIN-SUFFIX,heiliaodi.com
+# 爱黑料
+DOMAIN-SUFFIX,aiheiliao1.com
+# 911爆料
+DOMAIN-SUFFIX,blw66.com
+# 今日看料
+DOMAIN-SUFFIX,kanliao19.one
+# 海角精选
+DOMAIN-SUFFIX,haijiaolove.xyz
