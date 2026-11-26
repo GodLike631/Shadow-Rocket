@@ -23,6 +23,7 @@ TG_GROUP = "https://t.me/tvshare23"
 JD_TYPE = {"all": "all", "censored": "0", "uncensored": "1", "western": "2", "fc2": "3"}
 GETAV_HOSTS = ["https://getav.net", "https://getav.me", "https://getav.live", "https://getav.co", "https://getav.top"]
 AV123_HOST = "https://123av.com"
+U9A9_HOST = "https://u9a9.com"
 MISSAV_SEARCH_HOST = "https://www.missav06.net"
 MISSAV_PLAY_HOSTS = ["https://missav.ws", "https://www.missav06.net", "https://www.thisav.my"]
 KANAV_HOSTS = ["https://kanav.ad", "https://kanav.info"]
@@ -1282,6 +1283,7 @@ class Spider(BaseSpider):
                 eps.append("%s$%s" % (safe_label(name), value))
             sources.append(("🦋 蝴蝶·115云播", eps))
         mag_eps = []
+        direct_eps = []
         mag_seen = set()
         if isinstance(mag_data, dict) and isinstance(mag_data.get("magnets"), list):
             for idx, g in enumerate(mag_data["magnets"][:30]):
@@ -1314,8 +1316,35 @@ class Spider(BaseSpider):
                     size_mb = int(size_bytes / 1048576 + 0.5)
                 value = json.dumps({"kind": "magnet", "id": mid, "number": number, "magnet": link, "magName": str(g.get("name") or ""), "sizeMb": size_mb}, ensure_ascii=False, separators=(",", ":"))
                 mag_eps.append("%s$%s" % (safe_label(name), value))
+                direct_value = json.dumps({"kind": "magnet_direct", "id": mid, "number": number, "magnet": link}, ensure_ascii=False, separators=(",", ":"))
+                direct_eps.append("%s$%s" % (safe_label(name), direct_value))
+        if len(mag_eps) < 10 and pre_number:
+            agg = self._soft(lambda: self._probe_u9a9(pre_number))
+            if isinstance(agg, list):
+                for g in agg[:10]:
+                    link = g.get("magnet") or ""
+                    if not link:
+                        continue
+                    key = str(g.get("hash") or "").lower()
+                    if not key:
+                        found = re.search(r"btih:([a-z0-9]+)", link, re.I)
+                        if found:
+                            key = found.group(1).lower()
+                    if not key or key in mag_seen:
+                        continue
+                    mag_seen.add(key)
+                    size_bytes = g.get("size_bytes") or 0
+                    size_mb = 0
+                    if size_bytes:
+                        size_mb = int(size_bytes / 1048576 + 0.5)
+                    name = self._magnet_name("[聚合]", str(g.get("name") or ""), fmt_size(size_bytes), False, False, str(g.get("date") or ""))
+                    value = json.dumps({"kind": "magnet", "id": mid, "number": number, "magnet": link, "magName": str(g.get("name") or ""), "sizeMb": size_mb}, ensure_ascii=False, separators=(",", ":"))
+                    mag_eps.append("%s$%s" % (safe_label(name), value))
+                    direct_value = json.dumps({"kind": "magnet_direct", "id": mid, "number": number, "magnet": link}, ensure_ascii=False, separators=(",", ":"))
+                    direct_eps.append("%s$%s" % (safe_label(name), direct_value))
         if mag_eps:
             sources.append(("🦋 蝴蝶·115离线", mag_eps))
+            sources.append(("🦋 蝴蝶·磁力直连", direct_eps))
         if getav_hit:
             eps = []
             for gt in getav_hit.get("tiers", []):
@@ -1459,6 +1488,10 @@ class Spider(BaseSpider):
             except Exception:
                 return {"parse": 0, "msg": "115 取链失败：直链与 HLS 均不可用，请检查 115 Cookie 是否有效"}
             return {"parse": 0, "jx": 0, "url": play["url"], "header": play["headers"], "format": play["format"]}
+        if kind == "magnet_direct":
+            if not ref.get("magnet"):
+                return {"parse": 0, "msg": "这条候选没有可播放的链接，换一条试试"}
+            return {"parse": 0, "jx": 0, "url": str(ref.get("magnet")), "header": {"User-Agent": UA}}
         if kind == "magnet":
             number = str(ref.get("number") or "")
             if number and self._pan115_cookie:
@@ -1907,6 +1940,62 @@ class Spider(BaseSpider):
                 return {"slug": lower}
             at = r["text"].find(needle, at + 1)
         return None
+
+    def _probe_u9a9(self, number):
+        lower = str(number or "").lower()
+        if not lower:
+            return None
+        r = self._site_get(U9A9_HOST + "/?type=2&search=" + quote(number, safe=""), {
+            "Referer": U9A9_HOST + "/",
+        })
+        if r["status"] != 200 or not r["text"]:
+            return None
+        parts = [p for p in re.split(r"[^a-z0-9]+", lower) if p]
+        if not parts:
+            return None
+        num_pat = re.compile(r"(?<![a-z0-9])" + r"[\s\-_.]*".join(re.escape(p) for p in parts) + r"(?![0-9])")
+        out = []
+        seen = set()
+        for chunk in r["text"].split("<tr"):
+            found = re.search(r"magnet:\?xt=urn:btih:([0-9a-fA-F]{40})", chunk, re.I)
+            if not found:
+                continue
+            key = found.group(1).lower()
+            if key in seen:
+                continue
+            title_m = re.search(r"title=\"([^\"]+)\"", chunk)
+            if not title_m:
+                continue
+            title = title_m.group(1).strip()
+            if not num_pat.search(title.lower()):
+                continue
+            link_m = re.search(r"href=\"(magnet:[^\"]+)\"", chunk)
+            if not link_m:
+                continue
+            link = link_m.group(1).replace("&amp;", "&")
+            size_bytes = 0
+            size_m = re.search(r"<td class=\"text-center\">(\d+(?:\.\d+)?)\s*(GB|MB|KB)</td>", chunk)
+            if size_m:
+                try:
+                    num = float(size_m.group(1))
+                except (TypeError, ValueError):
+                    num = 0
+                unit = size_m.group(2)
+                if unit == "GB":
+                    size_bytes = int(num * 1073741824)
+                elif unit == "MB":
+                    size_bytes = int(num * 1048576)
+                else:
+                    size_bytes = int(num * 1024)
+            date = ""
+            date_m = re.search(r"<td class=\"text-center\">(\d{4}-\d{2}-\d{2}) \d{2}:\d{2}:\d{2}</td>", chunk)
+            if date_m:
+                date = date_m.group(1)
+            seen.add(key)
+            out.append({"hash": key, "magnet": link, "name": title, "size_bytes": size_bytes, "date": date})
+            if len(out) >= 10:
+                break
+        return out
 
     def _play_123(self, slug):
         page_url = AV123_HOST + "/cn/v/" + slug
