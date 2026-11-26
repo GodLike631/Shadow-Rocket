@@ -1195,8 +1195,8 @@ class Spider(BaseSpider):
                 ))
         return "\n".join(lines)
 
-    def _magnet_name(self, prefix, name, size_str, cnsub, hd, date):
-        parts = [prefix + " " + (name or "磁力")]
+    def _magnet_name(self, prefix, size_str, cnsub, hd, date):
+        parts = [prefix]
         if size_str:
             parts.append(size_str)
         if cnsub:
@@ -1205,7 +1205,7 @@ class Spider(BaseSpider):
             parts.append("高清")
         if date:
             parts.append(date)
-        return trim_text("｜".join(parts), 72)
+        return trim_text(" ".join(parts), 72)
 
     def detailContent(self, ids):
         raw_id = ids[0] if isinstance(ids, (list, tuple)) and ids else str(ids or "")
@@ -1310,7 +1310,7 @@ class Spider(BaseSpider):
                 if key in mag_seen:
                     continue
                 mag_seen.add(key)
-                name = self._magnet_name("[线上]", str(g.get("name") or ""), fmt_size(size_bytes), bool(g.get("cnsub")), bool(g.get("hd")), str(g.get("created_at") or ""))
+                name = self._magnet_name("[线上]", fmt_size(size_bytes), bool(g.get("cnsub")), bool(g.get("hd")), str(g.get("created_at") or ""))
                 size_mb = 0
                 if size_bytes:
                     size_mb = int(size_bytes / 1048576 + 0.5)
@@ -1337,7 +1337,7 @@ class Spider(BaseSpider):
                     size_mb = 0
                     if size_bytes:
                         size_mb = int(size_bytes / 1048576 + 0.5)
-                    name = self._magnet_name("[聚合]", str(g.get("name") or ""), fmt_size(size_bytes), False, False, str(g.get("date") or ""))
+                    name = self._magnet_name("[聚合]", fmt_size(size_bytes), False, False, str(g.get("date") or ""))
                     value = json.dumps({"kind": "magnet", "id": mid, "number": number, "magnet": link, "magName": str(g.get("name") or ""), "sizeMb": size_mb}, ensure_ascii=False, separators=(",", ":"))
                     mag_eps.append("%s$%s" % (safe_label(name), value))
                     direct_value = json.dumps({"kind": "magnet_direct", "id": mid, "number": number, "magnet": link}, ensure_ascii=False, separators=(",", ":"))
