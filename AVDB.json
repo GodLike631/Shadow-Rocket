@@ -2,7 +2,7 @@
   "sites": [
     {
       "api": "https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/AVDB.py",
-      "ext": "{\"javdb_user\": \"dev8588617\", \"mecquv-fosruH-popmi7\": \"你的JavDB密码\", \"pan115_cookie\": \"\"}",
+      "ext": "{\"javdb_user\": \"dev8588617\", \"javdb_pass\": \"mecquv-fosruH-popmi7\", \"pan115_cookie\": \"\"}",
       "key": "AVDB",
       "name": "AVDB18.py",
       "type": 3
