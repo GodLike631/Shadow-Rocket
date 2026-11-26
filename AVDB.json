@@ -1,7 +1,7 @@
 {
   "sites": [
     {
-      "api": "https://drive.google.com/uc?export=download&id=1Ox9Szn2TBjZFX_v0sszyrxFCRreGYF_T",
+      "api": "https://raw.githubusercontent.com/GodLike631/Shadow-Rocket/refs/heads/main/AVDB.py",
       "ext": "{\"javdb_user\": \"dev8588617\", \"mecquv-fosruH-popmi7\": \"你的JavDB密码\", \"pan115_cookie\": \"\"}",
       "key": "AVDB",
       "name": "AVDB18.py",
